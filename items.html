@@ -1,0 +1,221 @@
+<!DOCTYPE html><!-- base das paginas -->
+<html>
+    <head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="i_style.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="general.js"></script>
+</head>
+
+<body onload="verifyId();">
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+    <div id="identification">
+        <table>
+            <tr>
+                <td>
+                    <div id="userdisplaygeneral"></div>
+                </td>
+                <td style="text-align: center">
+                    <div id="rankerinogeneral"></div>
+                </td>
+                <td>
+                    <div id="avatargeneral"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div class="divs">
+        <!-- INTRODUCTION TO ITEMS -->
+        <h2>Items</h2>
+        <p>Items can be separated into 3 types :</p>
+        <ul>
+            <li>Passive</li>
+            <li>Active</li>
+            <li>Consumables</li>
+        </ul>
+        <!-- PASSIVE ITEMS -->
+        <p><span class="lb">Passive Items</span> are those that do not require any activation beyond the buying process. They are in full effect as soon as they are in any of your 6 inventory slots.</p>
+        <!-- ACTIVE ITEMS -->
+        <p><span class="lb">Active Items</span> are those that, althought they have passive stats like <span class="lb">Passive Items</span>, they have additional effects that are activated either by pressing the number bound to the inventory slot they are in, or automatically when certain circumstances are met. For example: <span class="lb">Guardian Angel</span>'s Active is used upon taking lethal damage (0 HP). Since these items have a Passive and an Active, their passive counterpart is weaker than a pure <span class="lb">Passive Item</span>.</p>
+        <!-- CONSUMABLES -->
+        <p><span class="lb">Consumables</span>, like <span class="lb">Health Potions</span>, do not provide anything until activated, and disappear or lose effect after the first use. Some consumables can be bought even if the player doesn't have a free inventory slot, and are aplied immediately, like <span class="lb">Elixirs</span>.</p>
+        <!-- UNIQUE EFFECTS -->
+        <p>Some <span class="lb">Items</span> have <span class="lb">Unique</span> effects, that cannot stack with each other. On <span class="lb">Active Items</span> The cooldown will be applied on all items that have the same active. This means that if you buy 2 <span class="lb">Guardian Angels</span>, when your <span class="lb">HP</span> drops down to 0, the item will automatically use, and both will enter the cooldown.</p>
+    </div><br><br><br>
+    <div class="divs">
+        <!-- INTRODUCTION TO BUILDS -->
+        <h2>Itemization Choices (Aka Builds)</h2>
+        <p>The items you choose to buy are considered your <span class="lb">Build</span>. And to build properly, you have to be aware of your <span class="lo">Champion</span>, your <span class="lgreen">team</span>, and finally, the enemy <span class="lr">team</span>'s <span class="lo">Champions</span> and <span class="lb">Items</span> too!</p>
+        <p><span class="lb">Wards</span> are important items that contribute to your <span class="lgreen">team</span>'s vision, and overall playmaking capability. While everyone can get free stealth wards from their <span class="lb">trinket</span> (costs 0 <a href=""><span class="lo">Gold</span></a> and stays in the 4th inventory slot), you need to buy <span class="lp">Control Wards</span> to contribute to the <span class="lb">Vision Control</span> part of League of Legends.</p>
+        <p>When you first spawn, you start with 500 <a href=""><span class="lo">Gold</span></a>, which can be spent on <span class="lb">Starting Items</span>. These are highly cost effective items, but they don't build into stronger items, meaning they are only good for <span class="lb">Early Game</span>.</p>
+        <p>In the <span class="lb">Late Game</span> phase of the game, everyone should have 6 full items that cannot be upgraded further. even if they are not super cost effective like the <span class="lb">Starting Items</span>, the stats are much higher, and have better actives too. Some <span class="lo">Champions</span> have higher scaling on abilities, and as such are stronger in the <span class="lb">Late Game</span> than others. You should pace your game according to your <span class="lgreen">team</span>'s <span class="lgreen">strengths</span> and <span class="lr">weaknesses</span>.</p>
+    </div><br><br><br>
+    <div id="jeff">
+        <!-- ICONIC ITEMS -->
+        <table id="items_table">
+            <caption>Some Relevant Items To Take Note Of:</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Stats</th>
+                    <th>Passive Effect</th>
+                    <th>Active Effect</th>
+                    <th>Cost</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6"><span class="lb">Main Starting Items</span></td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Doran's_Blade_item.png" />Doran's Blade</td>
+                    <td>+80 HP<br />+8 AD<br />+3% Life Steal</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>450 Gold</td>
+                    <td>Usually the Go-To <span class="lb">Starting Item</span> on AD <span class="lo">Champions</span>.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Doran's_Shield_item.png" />Doran's Shield</td>
+                    <td>+80 HP</td>
+                    <td><span class="lb">+6 flat health regeneration</span> per <span class="lb">5 seconds</span>.<br />Unique: <span class="lb">Restores 20 health</span> over <span class="lb">10 seconds</span> after taking <span class="lr">damage</span> from an <span class="lr">enemy</span> <span class="lo">Champion</span>.</td>
+                    <td>---</td>
+                    <td>450 Gold</td>
+                    <td>Usually the Go-To <span class="lb">Starting Item</span> on Tank <span class="lo">Champions</span>.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Doran's_Ring_item.png" />Doran's Ring</td>
+                    <td>+60 HP<br />+50% Base Mana Regeneration<br />+15 Ability Power</td>
+                    <td>UNIQUE: <span class="lb">Restores 4 mana</span> upon killing an unit.</td>
+                    <td>---</td>
+                    <td>400 Gold</td>
+                    <td>Usually the Go-To <span class="lb">Starting Item</span> on AP <span class="lo">Champions</span>.</td>
+                </tr>
+                <tr>
+                    <td colspan="6"><span class="lb">Basic Trinkets</span></td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Warding_Totem_item.png" />Warding Totem</td>
+                    <td>Stores one charge every 180 - 90 (based on level) seconds, up to 2 maximum charges.</td>
+                    <td>---</td>
+                    <td>Consume a charge to place an invisible <span class="lp">Stealth Ward</span> which reveals the surrounding area for 60 - 120 (based on level) seconds.</td>
+                    <td>0 Gold</td>
+                    <td>You should get this <span class="lgreen">free</span> trinket at the start of every game.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Sweeping_Lens_item.png" />Sweeping Lens</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>Summons a drone at the target location for <span class="lb">6 seconds</span> (500-2000 range (based on level). The drone outlines camouflaged, invisible and unseen <span class="lr">enemies</span> (including stealth, fog and brush), reveals <span class="lp">Wards</span> and stealthed traps, and disables <span class="lp">Wards</span> within a 450-575 (based on level) radius area (90 - 60 (based on level) second cooldown).</td>
+                    <td>0 Gold</td>
+                    <td>You should get this <span class="lgreen">free</span> trinket if you have a warding item, and want to take out <span class="lr">enemy</span> wards.</td>
+                </tr>
+                <tr>
+                    <td colspan="6"><span class="lb">Some Important Items</span></td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Duskblade_of_Draktharr_item.png" />Duskblade of Draktharr</td>
+                    <td>+55 AD<br />+10% Cooldown Reduction (CDR)</td>
+                    <td>UNIQUE: <span class="lb">+18 Lethality</span> (11.2 - 18 (based on level) armor penetration)</td>
+                    <td>UNIQUE – NIGHTSTALKER: After being unseen for at least <span class="lb">1 second</span>, your next basic attack against an <span class="lr">enemy</span> <span class="lo">Champion</span> will have <span class="lb">enhanced effects</span>.<br />UNIQUE – BLACKOUT: When spotted by an <span class="lr">enemy</span> <span class="lp">ward</span>, causes a blackout for <span class="lb">8 seconds</span>, disabling all nearby <span class="lr">enemy</span> <span class="lp">wards</span> (90 second cooldown).</td>
+                    <td>2900 Gold</td>
+                    <td>Mainly a melee Assassin Item.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Ardent_Censer_item.png" />Ardent Censer</td>
+                    <td>+50% base mana regeneration<br />+60 ability power<br />+10% cooldown reduction<br />UNIQUE: +10% heal and shield power</td>
+                    <td>UNIQUE: <span class="lb">+8% movement speed</span>.<br />UNIQUE: Heals and shields on <span class="lgreen">allied</span> <span class="lo">Champions</span> (excluding yourself) <span class="lb">enhance</span> your basic attacks and theirs for <span class="lb">6 seconds</span>. Granting you and them <span class="lb">+20% - 35%</span> (based on target's level) <span class="lb">attack speed</span> and <span class="lb">20 - 35</span> (based on target's level) <span class="lb">bonus on-hit magic damage</span>.</td>
+                    <td>---</td>
+                    <td>2300</td>
+                    <td>Currently one of the strongest Support Items.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Gargoyle_Stoneplate_item.png" />Gargoyle Stoneplate</td>
+                    <td>+40 magic resistance<br />+40 armor</td>
+                    <td>UNIQUE – STONE SKIN: If 3 or more <span class="lr">enemy</span> <span class="lo">Champions</span> are nearby, grants 40 bonus armor and 40 bonus magic resistance.</td>
+                    <td>UNIQUE – METALLICIZE: <span class="lb">Increases current</span> and <span class="lb">maximum health</span> by <span class="lb">40%</span>, as well as <span class="lo">Champion</span> <span class="lb">size</span>, but reduces the damage you deal by 60% for 4 seconds. If STONE SKIN is active, instead <span class="lb">increases health</span> by <span class="lb">100%</span> (90 second cooldown). <span class="lb">Current health percentage</span> is conserved when the effect ends, as well.</td>
+                    <td>2500 Gold</td>
+                    <td>A great Tank item, that greatly buffs any skill with HP ratio.</td>
+                </tr>
+                <tr>
+                    <td><img src="Items/Infinity_Edge_item.png" />Infinity Edge</td>
+                    <td>+70 attack damage<br />+20% critical strike chance</td>
+                    <td>UNIQUE: <span class="lb">Critical strike bonus damage</span> is <span class="lb">increased</span> by <span class="lb">50%</span>.</td>
+                    <td>---</td>
+                    <td>3400 Gold</td>
+                    <td>Mainly an ADC Item. Gives huge damage boost to crits.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><img src="Items/Rabadon's_Deathcap_item.png" />Rabadon's Deathcap</td>
+                    <td>+120 Ability Power</td>
+                    <td>UNIQUE: <span class="lb">+35% ability power</span>.</td>
+                    <td>---</td>
+                    <td>3800 Gold</td>
+                    <td>A powerful item for pure AP casters.</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!--Básico para todas as páginas-->
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+
+    <!--Básico para todas as páginas-->
+
+</body>
+</html>

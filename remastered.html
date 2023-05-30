@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="remastered.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="general.js"></script>
+</head>
+
+<body>
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+
+    <!--Básico para todas as páginas-->
+    <div class="music_player">
+        <div id="songLogo" class="logo">
+            <img src="images/LND.jpg" />
+        </div>
+        <div class="player">
+            <div id="songTitle" class="song_title">Title</div>
+            <!-- Este é o div que apresenta o nome da música. Têm título pela mesma razão do 00:00, explicado abaixo. -->
+            <input id="songSlider" class="song_slider" type="range" min="0" onchange="seekSong()" />
+            <!-- Isto é o slider da música. Tem um valor máx dependente da duração da música. O atributo 'step' não é necessario pois o valor default é 1. Caso se pusesse "step='1'", cada mudança no slider teria o valor de 1 segundo. Mudar para 10, por exemplo, faria a música saltar de 10s em 10s sempre que se clicasse ou arrastasse o slider. -->
+            <div>
+                <div id="currentTime" class="current_time">00:00</div>
+                <div id="duration" class="duration">00:00</div>
+            </div>
+            <!-- Os 00:00 são só enquanto o player não carrega. É um intervalo de tempo mínimo (1000 milisegundos, como indicado no javascript), mas pus isto para não dar erros visuais devido a falta do parâmetro (talvez aparecesse NaN (Not a Number) no segundo que demora a carregar). Não acho ser relevante, mas não faz mal a ninguém. -->
+            <div class="controllers">
+                <!-- Botões para controlar as músicas e o volume. Cada uma chama a função a que lhe diz respeito. Alguns deles têm um pouco de CSS para evitar fazer muitos divs/classes. -->
+                <img src="images/previous.png" width="30px" onclick="previous();" />
+                <img id="pOPImg" src="images/pause.png" width="40px" onclick="playOrPauseSong(this);" />
+                <img src="images/next.png" width="30px" onclick="next();" />
+                <img src="images/volume-down.png" id="sound" width="15px" />
+                <input id="volumeSlider" class="volume_slider" type="range" min="0" max="1" step="0.01" onchange="adjustVolume()" />
+                <img src="images/volume-up.png" width="15px" style="margin-left:2px;" />
+            </div>
+            <div id="nextSongTitle" class="song_title"><b>Next Song: </b>Next song Title</div>
+            <!-- Este é o div que apresenta o nome da música seguinte. Têm título pela mesma razão do 00:00 . -->
+        </div>
+    </div>
+    <div id="explanation" class="divs">
+        <div>
+            <h3>We have left a reward on this last page of our guide. It needs a password that you can get by solving this Quiz. It should be quite easy if you've read our guide. <br><em>Good Luck</em>!</h3>
+        </div>
+    </div>
+    <div id="setquiz">
+        <div id="pergunta" class="pergunta"></div>
+        <table id="questions">
+            <tr>
+                <td>
+                    <div id="opcao1"  onclick="validarResposta(this.innerHTML,this.id);"></div>
+                </td>
+                <td>
+                    <div id="opcao2" onclick="validarResposta(this.innerHTML,this.id);"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="opcao3" onclick="validarResposta(this.innerHTML,this.id);"></div>
+                </td>
+                <td>
+                    <div id="opcao4" onclick="validarResposta(this.innerHTML,this.id);"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="endquiz">
+        <h3>Your score was:<br><span id="result"></span></h3><br>
+        <span id="wrong"><p>Sorry, but you are not yet worthy of receiving the missing piece to our guide's secret layer. You can always go through our guide one more time and take this quiz</p></span>
+        <span id="right"><p>Seeing you at least got over 12 question right, here's the password to that secret layer of this guide:<br><b>JesushadaGA</b></p></span>
+    </div>
+    <div id="everything">
+        <div id="login">
+            <p>Username:</p>
+            <input id="username" class="inputs" type="text" maxlength="20"><br>
+            <p>Password:</p>
+            <input id="password" class="inputs" type="password"><br><br>
+            <input type="button" value="Sign In" onclick="checkPassword();movingOutLogin()">
+        </div>
+        <div id="arrowr" class="arrows"><img src="backgrounds/Ic_keyboard_arrow_right_48px.svg.png" width="40px" onclick="movingOutLogin()"></div>
+    </div>
+    <div id="arrowl" class="arrows"><img src="backgrounds/Ic_keyboard_arrow_left_48px.svg.png" width="40px" onclick="movingLogin()"></div>
+    <div  class="divs" id="triggeringquestions">
+        <h3>Answer these quick questions before receiving your reward :</h3>
+        <div id="trigger1">
+            <div><h3>What is your Gender?</h3></div>
+            <table class="questions"><tr id="atrigger1"></tr></table>
+        </div>
+        <div id="trigger2">
+            <div><h3>What is your favorite Role?</h3></div>
+            <table class="questions"><tr id="atrigger2"></tr></table>
+        </div>
+        <div id="trigger3">
+            <div><h3>What's your rank?</h3></div>
+            <table class="questions"><tr id="atrigger3"></tr></table>
+        </div>
+    </div>
+    <div id="account">
+        <h2>Identification:</h2>
+        <div id="avatar">asdasdasd</div>
+        <div id="userdisplay"></div>
+        <div id="rankerino">asdda</div>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+
+    <!--Básico para todas as páginas-->
+    <script src="remastered.js"></script>
+</body>
+</html>

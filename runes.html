@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!-- base das paginas -->
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="r_style.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="runes.js"></script>
+    <script src="general.js"></script>
+</head>
+
+<body onload="verifyId();">
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+    <div id="identification">
+        <table>
+            <tr>
+                <td>
+                    <div id="userdisplaygeneral"></div>
+                </td>
+                <td style="text-align: center">
+                    <div id="rankerinogeneral"></div>
+                </td>
+                <td>
+                    <div id="avatargeneral"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Básico para todas as páginas-->
+    <div id="runepath">
+        <div id="runes">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Runes reforged</h1>
+                    </th>
+                </tr>
+            </table>
+            <p>With the new Season now live in League of Legends, Runes and Masteries were combined into a single system, which can be re-arranged in the collection tab. It can also be changed in Champion Select, as opposed to the old Rune system.</p>
+            <p>There are 60 Runes, which are all free now, providing a more interesting gameplay to newer players.</p>
+        </div>
+    </div>
+    <div id="choose">
+        <h1>Choose your path</h1>
+        <span id="precisionshadow"><img id="precisionr" src="Paths/precision.png" onclick="precisionChoose()"></span>
+        <span id="dominationshadow"><img id="dominationr" src="Paths/domination.png" onclick="dominationChoose()"></span>
+        <span id="sorceryshadow"><img id="sorceryr" src="Paths/sorcery.png" onclick="sorceryChoose()"></span>
+        <span id="resolveshadow"><img id="resolver" src="Paths/bullshit.png" onclick="resolveChoose()"></span>
+        <span id="inspirationshadow"><img id="inspirationr" src="Paths/inspiration.png" onclick="inspirationChoose()"></span>
+    </div>
+    <br>
+    <div id="divise">
+        <div id="nochoose">
+            <p>Choose one tree to pursue</p>
+        </div>
+        <div id="precisionchoose" class="choose">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Precision</h1>
+                        <h4>Become a Legend</h4>
+                        <p>This path gives improved attacks and sustained damage. It is mostly an ADC path due to the possibility of having improved Damage, Sustain and some Mobility.</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="dominationchoose" class="choose">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Domination</h1>
+                        <h4>Hunt and Eliminate Pray</h4>
+                        <p>This path emphasizes Burst damage and target access. It is mostly an Assassin path due to the greatily improved damage to Assassin-like kits, combined with great Base Damages.</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="sorcerychoose" class="choose">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Sorcery</h1>
+                        <h4>Unleash Destruction</h4>
+                        <p>This path focuses on empowering abilities and the manipulation of resources. It is mostly a Mage path due to favoring long-ranged, Mana spending Spells.</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="resolvechoose" class="choose">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Resolve</h1>
+                        <h4>Live Forever</h4>
+                        <p>This path revolves around durability and crowd control. It is mostly a Tank path due to offering Defensive stats, and strengthening Crowd Control effects, which are common on tankier Champions.</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="inspirationchoose" class="choose">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Inspiration</h1>
+                        <h4>Outwit Mere Mortals</h4>
+                        <p>This path targets Creative thinking and rule bending. This path is a bit of an oddball, it does not favor much any role, and it is more of a niche pick. It mainly revolves around gold, Consumables and Summoner Spells.</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="diverino">
+        <table id="table1">
+            <tr>
+                <!-- DIFERENT PATHS-->
+                <th class="a heads" onclick="secprecision()"><img src="Paths/precision.png" style="width: 8vh"></th>
+                <th class="b heads" onclick="secdomination()"><img src="Paths/domination.png" style="width: 8vh"></th>
+                <th class="c heads" onclick="secsorcery()"><img src="Paths/sorcery.png" style="width: 8vh"></th>
+                <th class="d heads" onclick="secresolve()"><img src="Paths/bullshit.png" style="width: 8vh"></th>
+                <th class="e heads" onclick="secinspiration()"><img src="Paths/inspiration.png" style="width: 8vh"></th>
+            </tr>
+            <!-- A partir daqui, sempre que se coloca o rato por cima de uma runa, aparece a explicação desta ao lado graças a onmouseenter e onmouseout. Isto faz com que o div dessa explicação apareça e dasapareça respetivamente através de javascript -->
+            <tr>
+                <!-- GREATER RUNES ROW (GR) -->
+                <td class="gr precision">
+                    <img src="Runes/Press_the_Attack_rune.png" style="width: 10vh" onmouseenter="pressTheAttack()" onmouseout="pressTheAttackOut()"><br>
+                    <img src="Runes/Lethal_Tempo_rune.png" style="width: 10vh" onmouseenter="lethalTempo()" onmouseout="lethalTempoOut()"><br>
+                    <img src="Runes/Fleet_Footwork_rune.png" style="width: 10vh" onmouseenter="fleetFootwork()" onmouseout="fleetFootworkOut()">
+                </td>
+                <td class="gr">
+                    <img src="Runes/Electrocute_rune.png" style="width: 10vh" onmouseenter="eletrocute()" onmouseout="eletrocuteOut()"><br>
+                    <img src="Runes/Predator_rune.png" style="width: 10vh" onmouseenter="predator()" onmouseout="predatorOut()"><br>
+                    <img src="Runes/Dark_Harvest_rune.png" style="width: 10vh" onmouseenter="darkHarvest()" onmouseout="darkHarvestOut()">
+                </td>
+                <td class="gr">
+                    <img src="Runes/Summon_Aery_rune.png" style="width: 10vh" onmouseenter="summonAery()" onmouseout="summonAeryOut()"><br>
+                    <img src="Runes/Arcane_Comet_rune.png" style="width: 10vh" onmouseenter="arcaneComet()" onmouseout="arcaneCometOut()"><br>
+                    <img src="Runes/Phase_Rush_rune.png" style="width: 10vh" onmouseenter="phaseRush()" onmouseout="phaseRushOut()">
+                </td>
+                <td class="gr">
+                    <img src="Runes/Grasp_of_the_Undying_rune.png" style="width: 10vh" onmouseenter="graspOfTheUndying()" onmouseout="graspOfTheUndyingOut()"><br>
+                    <img src="Runes/Aftershock_rune.png" style="width: 10vh" onmouseenter="aftershock()" onmouseout="aftershockOut()"><br>
+                    <img src="Runes/Guardian_rune.png" style="width: 10vh" onmouseenter="guardian()" onmouseout="guardianOut()">
+                </td>
+                <!-- as da inspiration tree têm uma classe diferente -->
+                <td class="gr1">
+                    <img src="Runes/Unsealed_Spellbook_rune.png" style="width: 10vh" onmouseenter="unsealedSpellbook()" onmouseout="unsealedSpellbookOut()"><br>
+                    <img src="Runes/Glacial_Augment_rune.png" style="width: 10vh" onmouseenter="glacialAugment()" onmouseout="glacialAugmentOut()"><br>
+                    <img src="Runes/Kleptomancy_rune.png" style="width: 10vh" onmouseenter="kleptomancy()" onmouseout="kleptomancyOut()">
+                </td>
+            </tr>
+            <tr>
+                <!-- NORMAL RUNES (NR) -->
+                <td class="nr precision">
+                    <img src="Runes/Overheal_rune.png" style="width: 3.5vw;" onmouseenter="overheal()" onmouseout="overhealOut()">
+                    <img src="Runes/Triumph_rune.png" style="width: 3.5vw" onmouseenter="triumph()" onmouseout="triumphOut()">
+                    <img src="Runes/Presence_of_Mind_rune.png" style="width: 3.5vw" onmouseenter="presenceOfMind()" onmouseout="presenceOfMindOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Cheap_Shot_rune.png" style="width: 3.5vw" onmouseenter="cheapShot()" onmouseout="cheapShotOut()">
+                    <img src="Runes/Taste_of_Blood_rune.png" style="width: 3.5vw" onmouseenter="tasteOfBlood()" onmouseout="tasteOfBloodOut()">
+                    <img src="Runes/Sudden_Impact_rune.png" style="width: 3.5vw" onmouseenter="suddenImpact()" onmouseout="suddenImpactOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Nullifying_Orb_rune.png" style="width: 3.5vw" onmouseenter="nullifyingOrb()" onmouseout="nullifyingOrbOut()">
+                    <img src="Runes/Manaflow_Band_rune.png" style="width: 3.5vw" onmouseenter="manaflowBand()" onmouseout="manaflowBandOut()">
+                    <img src="Runes/The_Ultimate_Hat_rune.png" style="width: 3.5vw" onmouseenter="theUltimateHat()" onmouseout="theUltimateHatOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Unflinching_rune.png" style="width: 3.5vw" onmouseenter="unflinching()" onmouseout="unflinchingOut()">
+                    <img src="Runes/Demolish_rune.png" style="width: 3.5vw" onmouseenter="demolish()" onmouseout="demolishOut()">
+                    <img src="Runes/Font_of_Life_rune.png" style="width: 3.5vw" onmouseenter="fontOfLife()" onmouseout="fontOfLifeOut()">
+                </td>
+                <td class="nr1">
+                    <!-- as da inspiration tree têm uma classe diferente -->
+                    <img src="Runes/Hextech_Flashtraption_rune.png" style="width: 3.5vw" onmouseenter="hextechFlash()" onmouseout="hextechFlashOut()">
+                    <img src="Runes/Biscuit_Delivery_rune.png" style="width: 3.5vw" onmouseenter="biscuitDelivery()" onmouseout="biscuitDeliveryOut()">
+                    <img src="Runes/Perfect_Timing_rune.png" style="width: 3.5vw" onmouseenter="perfectTiming()" onmouseout="perfectTimingOut()">
+                </td>
+            </tr>
+            <tr>
+                <td class="nr precision">
+                    <img src="Runes/Legend-_Alacrity_rune.png" style="width: 3.5vw" onmouseenter="legendAlacrity()" onmouseout="legendAlacrityOut()">
+                    <img src="Runes/Legend-_Tenacity_rune.png" style="width: 3.5vw" onmouseenter="legendTenacity()" onmouseout="legendTenacityOut()">
+                    <img src="Runes/Legend-_Bloodline_rune.png" style="width: 3.5vw" onmouseenter="legendBloodline()" onmouseout="legendBloodlineOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Zombie_Ward_rune.png" style="width: 3.5vw" onmouseenter="zombieWard()" onmouseout="zombieWardOut()">
+                    <img src="Runes/Ghost_Poro_rune.png" style="width: 3.5vw" onmouseenter="ghostPoro()" onmouseout="ghostPoroOut()">
+                    <img src="Runes/Eyeball_Collection_rune.png" style="width: 3.5vw" onmouseenter="eyeballCollection()" onmouseout="eyeballCollectionOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Transcendence_rune.png" style="width: 3.5vw" onmouseenter="transcendence()" onmouseout="transcendenceOut()">
+                    <img src="Runes/Celerity_rune.png" style="width: 3.5vw" onmouseenter="celerity()" onmouseout="celerityOut()">
+                    <img src="Runes/Absolute_Focus_rune.png" style="width: 3.5vw" onmouseenter="absoluteFocus()" onmouseout="absoluteFocusOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Iron_Skin_rune.png" style="width: 3.5vw" onmouseenter="ironSkin()" onmouseout="ironSkinOut()">
+                    <img src="Runes/Mirror_Shell_rune.png" style="width: 3.5vw" onmouseenter="mirrorShell()" onmouseout="mirrorShellOut()">
+                    <img src="Runes/Conditioning_rune.png" style="width: 3.5vw" onmouseenter="conditioning()" onmouseout="conditioningOut()">
+                </td>
+                <td class="nr1">
+                    <img src="Runes/Magical_Footwear_rune.png" style="width: 3.5vw" onmouseenter="magicalFootwear()" onmouseout="magicalFootwearOut()">
+                    <img src="Runes/Future's_Market_rune.png" style="width: 3.5vw" onmouseenter="futuresMarket()" onmouseout="futuresMarketOut()">
+                    <img src="Runes/Minion_Dematerializer_rune.png" style="width: 3.5vw" onmouseenter="minionDematerializer()" onmouseout="minionDematerializerOut()">
+                </td>
+            </tr>
+            <tr>
+                <td class="nr precision">
+                    <img src="Runes/Coup_de_Grace_rune.png" style="width: 3.5vw" onmouseenter="coupDeGrace()" onmouseout="coupDeGraceOut()">
+                    <img src="Runes/Cut_Down_rune.png" style="width: 3.5vw" onmouseenter="cutDown()" onmouseout="cutDownOut()">
+                    <img src="Runes/Last_Stand_rune.png" style="width: 3.5vw" onmouseenter="lastStand()" onmouseout="lastStandOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Ravenous_Hunter_rune.png" style="width: 3.5vw" onmouseenter="ravenousHunter()" onmouseout="ravenousHunterOut()">
+                    <img src="Runes/Ingenious_Hunter_rune.png" style="width: 3.5vw" onmouseenter="ingeniousHunter()" onmouseout="ingeniousHunterOut()">
+                    <img src="Runes/Relentless_Hunter_rune.png" style="width: 3.5vw" onmouseenter="relentlessHunter()" onmouseout="relentlessHunterOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Scorch_rune.png" style="width: 3.5vw" onmouseenter="scorch()" onmouseout="scorchOut()">
+                    <img src="Runes/Waterwalking_rune.png" style="width: 3.5vw" onmouseenter="waterwalking()" onmouseout="waterwalkingOut()">
+                    <img src="Runes/Gathering_Storm_rune.png" style="width: 3.5vw" onmouseenter="gatheringStorm()" onmouseout="gatheringStormOut()">
+                </td>
+                <td class="nr">
+                    <img src="Runes/Overgrowth_rune.png" style="width: 3.5vw" onmouseenter="overgrowth()" onmouseout="overgrowthOut()">
+                    <img src="Runes/Revitalize_rune.png" style="width: 3.5vw" onmouseenter="revitalize()" onmouseout="revitalizeOut()">
+                    <img src="Runes/Second_Wind_rune.png" style="width: 3.5vw" onmouseenter="secondWind()" onmouseout="secondWindOut()">
+                </td>
+                <td class="nr1">
+                    <img src="Runes/Cosmic_Insight_rune.png" style="width: 3.5vw" onmouseenter="cosmicInsight()" onmouseout="cosmicInsightOut()">
+                    <img src="Runes/Approach_Velocity_rune.png" style="width: 3.5vw" onmouseenter="approachVelocity()" onmouseout="approachVelocityOut()">
+                    <img src="Runes/Celestial_Body_rune.png" style="width: 3.5vw" onmouseenter="celestialBody()" onmouseout="celestialBodyOut()">
+                </td>
+            </tr>
+        </table>
+        <!-- Estas divs são, como referido anteriormente, as divs explicativas da runa. -->
+        <div class="noinfobox">
+            <p>Hover one of the runes to find out its name and passives/stats!</p>
+        </div>
+        <!-- PRECISON -->
+        <div class="precisiondivs">
+            <div id="press_the_attack" class="infobox">
+                <h1>Press the Attack</h1>
+                <img src="Runes/Press_the_Attack_rune.png" style="width: 9vh"><br>
+                <p>
+                    Basic attacks against enemy champions apply <span class="stacks">stacks</span> for 4 seconds. Attacking a new target removes all <span class="stacks">stacks</span> from the previous target. Applying 3 <span class="stacks">stacks</span> to a target deals 30 - 120 (based on level) bonus <span class="adaptive">Adaptive</span> damage and makes them Vulnerable, causing them to take 12% increased damage from all sources (except from true damage) for the next 6 seconds.
+                </p>
+            </div>
+            <div id="lethal_tempo" class="infobox">
+                <h1>Lethal Tempo</h1>
+                <img src="Runes/Lethal_Tempo_rune.png" style="width: 9vh"><br>
+                <p>
+                    Damaging an enemy champion begins a 1.5 second timer. Upon completion, you gain 30% - 80% (based on level) <span class="as">Attack Speed</span> as well as removing the <span class="as">Attack Speed</span> cap for 3 seconds. Attacking a champion while the effect is active will extend the duration to 6 seconds.
+                </p>
+            </div>
+            <div id="fleet_footwork" class="infobox">
+                <h1>Fleet Footwork</h1>
+                <img src="Runes/Fleet_Footwork_rune.png" style="width: 9vh"><br>
+                <p>
+                    Attacking and moving builds Energy <span class="stacks">stacks</span>. A 100 <span class="stacks">stacks</span>, your next attack is Energized. Enenrgized attacks heal you for 5 - 50 (+0.1 Bonus <span class="ad">AD</span>, +0.2 <span class="ap">AP</span>) and grant +30% <span class="ms">Movement speed</span> for 1s. Healing is 60% as effective when used on a minion.
+                </p>
+            </div>
+            <div id="overheal" class="infobox">
+                <h1>Overheal</h1>
+                <img src="Runes/Overheal_rune.png" style="width: 9vh"><br>
+                <p>
+                    Healing in excess of your maximum <span class="hp">Health</span> is converted into a shield, up to 10 (+ 10% of maximum <span class="hp">Health</span>). The shield will decay if you have not received healing, dealt damage or taken damage in the last 6 seconds.
+                </p>
+            </div>
+            <div id="triumph" class="infobox">
+                <h1>Triumph</h1>
+                <img src="Runes/Triumph_rune.png" style="width: 9vh"><br>
+                <p>
+                    Champion takedowns, after a 0.5 second delay, restore 15% of your missing <span class="hp">Health</span> and grant an additional 25 <span class="gold">Gold</span>.
+                </p>
+            </div>
+            <div id="presence_of_mind" class="infobox">
+                <h1>Presence of Mind</h1>
+                <img src="Runes/Presence_of_Mind_rune.png" style="width: 9vh"><br>
+                <p>
+                    You restore mana equal to 100% of mana expended for 5 seconds whenever you score a champion takedown or level up.
+                </p>
+            </div>
+            <div id="legend_alacrity" class="infobox">
+                <h1>Legend: Alacrity</h1>
+                <img src="Runes/Legend-_Alacrity_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 3% (+1.5% per Legend stack) bonus <span class="as">Attack Speed</span>, up to 18% with 10 <span class="stacks">stacks</span>. <br> Earn progress toward Legend <span class="stacks">stacks</span> for every champion takedown, epic monster takedown, large monster kill, and minion kill.
+                </p>
+            </div>
+            <div id="legend_tenacity" class="infobox">
+                <h1>Legend: Tenacity</h1>
+                <img src="Runes/Legend-_Tenacity_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 5% (+ 1.5% per Legend stack) tenacity, up to 20% with 10 <span class="stacks">stacks</span>. <br> Earn progress toward Legend <span class="stacks">stacks</span> for every champion takedown, epic monster takedown, large monster kill, and minion kill.
+                </p>
+            </div>
+            <div id="legend_bloodline" class="infobox">
+                <h1>Legend: Bloodline</h1>
+                <img src="Runes/Legend-_Bloodline_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain (0.8% per Legend stack) life steal, up to 8% at 10 <span class="stacks">stacks</span>. <br> Earn progress toward Legend <span class="stacks">stacks</span> for every champion takedown, epic monster takedown, large monster kill, and minion kill.
+                </p>
+            </div>
+            <div id="coup_de_grace" class="infobox">
+                <h1>Coup de Grace</h1>
+                <img src="Runes/Coup_de_Grace_rune.png" style="width: 9vh"><br>
+                <p>
+                    Deal 10% increased damage to champions below 40% <span class="hp">Health</span>. Additionally, you gain 9 bonus <span class="ad">Attack Damage</span> or 15 <span class="ap">Ability Power</span> (<span class="adaptive">Adaptive</span>) for 10 seconds whenever you score a champion takedown. This bonus does not stack.
+                </p>
+            </div>
+            <div id="cut_down" class="infobox">
+                <h1>Cut Down</h1>
+                <img src="Runes/Cut_Down_rune.png" style="width: 9vh"><br>
+                <p>
+                    Deal 4% bonus damage to champions with at least 150 more maximum <span class="hp">Health</span> than you. This increases up to 10% bonus damage versus targets with 2000 more maximum <span class="hp">Health</span> than you.
+                </p>
+            </div>
+            <div id="last_stand" class="infobox">
+                <h1>Last Stand</h1>
+                <img src="Runes/Last_Stand_rune.png" style="width: 9vh"><br>
+                <p>
+                    Deal 5% bonus damage while below 60% of your maximum <span class="hp">Health</span>. This increases based on your missing <span class="hp">Health</span>, up to 12% bonus damage while below 30% of your maximum <span class="hp">Health</span>.
+                </p>
+            </div>
+        </div>
+        <!-- /PRECISON -->
+        <!-- DOMINATION -->
+        <div class="dominationdivs">
+            <div id="eletrocute" class="infobox">
+                <h1>Eletrocute</h1>
+                <img src="Runes/Electrocute_rune.png" style="width: 9vh"><br>
+                <p>
+                    Basic attacks and abilities generate <span class="stacks">stacks</span> on enemy champions hit, up to one per attack or cast. Applying 3 <span class="stacks">stacks</span> to a target within a 3 second period causes them to be struck by lightning, dealing them 50 - 220 (based on level) (+ 50% bonus <span class="ad">AD</span>) (+ 30% <span class="ap">AP</span>) <span class="adaptive">Adaptive</span> damage.
+                </p>
+            </div>
+            <div id="predator" class="infobox">
+                <h1>Predator</h1>
+                <img src="Runes/Predator_rune.png" style="width: 9vh"><br>
+                <p>
+                    Your boots gain the active effect, PREDATOR. The active is disabled for the first 150 seconds of the game.<br>PREDATOR: You begin a 3 second channel. You can move while channeling and will be interrupted if you receive damage (except minions), putting the item on full cooldown. Upon completion, you gain 45% bonus <span class="ms">Movement speed</span> icon <span class="ms">Movement speed</span> for the next 15 seconds or until your next attack or damaging ability, which deals 60 - 180 (based on level) (+ 40% bonus <span class="ad">AD</span>) (+ 25% <span class="ap">AP</span>) bonus <span class="adaptive">Adaptive</span> damage.
+                </p>
+            </div>
+            <div id="dark_harvest" class="infobox">
+                <h1>Dark Harvest</h1>
+                <img src="Runes/Dark_Harvest_rune.png" style="width: 9vh"><br>
+                <p>
+                    Large minions, large monsters and champions drop <span class="soul">Soul</span> Essence on death, which you can collect for the next 10 seconds by moving nearby. If you kill the target yourself, the <span class="soul">Soul</span> Essence will be automatically picked up. Champions grant 6 <span class="soul">Soul</span> Essence; large minions grant 4 <span class="soul">Soul</span> Essence; and large monsters grant 2 <span class="soul">Soul</span> Essence. Collecting <span class="soul">Soul</span> Essence empowers your next attack versus an enemy champion or structure within the next 20 seconds to deal 40 - 80 (based on level) (+ Total <span class="soul">Soul</span> Essence) (+ 25% bonus <span class="ad">AD</span>) (+ 20% <span class="ap">AP</span>) bonus <span class="adaptive">Adaptive</span> damage. After collecting 150 <span class="soul">Soul</span> Essence you become <span class="soul">Soul</span> Charged, increasing the time to trigger the empowered attack to 300 seconds.
+                </p>
+            </div>
+            <div id="cheap_shot" class="infobox">
+                <h1>Cheap Shot</h1>
+                <img src="Runes/Cheap_Shot_rune.png" style="width: 9vh"><br>
+                <p>
+                    Your attacks and damaging abilities deal 12 - 30 (based on level) bonus true damage to impaired enemy champions.
+                </p>
+            </div>
+            <div id="taste_of_blood" class="infobox">
+                <h1>Taste of Blood</h1>
+                <img src="Runes/Taste_of_Blood_rune.png" style="width: 9vh"><br>
+                <p>
+                    You heal for 18 - 35 (based on level) (+ 20% bonus <span class="ad">AD</span>) or (+ 10% <span class="ap">AP</span>) (<span class="adaptive">Adaptive</span>) the next time you damage an enemy champion.
+                </p>
+            </div>
+            <div id="sudden_impact" class="infobox">
+                <h1>Sudden Impact</h1>
+                <img src="Runes/Sudden_Impact_rune.png" style="width: 9vh"><br>
+                <p>
+                    Damaging an enemy champion within 3 seconds of using a dash, blink or Teleport, or exiting from invisibility or camouflage, grants 10 Lethality and 8 Magic Penetration for the next 5 seconds.
+                </p>
+            </div>
+            <div id="zombie_ward" class="infobox">
+                <h1>Zombie Ward</h1>
+                <img src="Runes/Zombie_Ward_rune.png" style="width: 9vh"><br>
+                <p>
+                    Scoring a takedown on an enemy ward summons a friendly Zombie Ward in its place (10 second assist timer). If the brush where you killed the enemy ward already contains an allied ward, you instead gain a Zombie Ward in your Trinket Slot that can be placed at any location within the next 30 seconds. Zombie Wards grant sight over 1100 units, are visible to the enemy team, have 1 <span class="hp">Health</span>, last for 180 seconds and don't count towards your ward limit. Additionally, your own wards will summon a Zombie Ward when they time-out. This does not occur if they are replaced due to the ward limit. Killing a Zombie Ward will grant 1 <span class="gold">Gold</span>.
+                </p>
+            </div>
+            <div id="ghost_poro" class="infobox">
+                <h1>Ghost Poro</h1>
+                <img src="Runes/Ghost_Poro_rune.png" style="width: 9vh"><br>
+                <p>
+                    Entering a brush instigates a channel that, upon completion, summons a Ghost Poro. You may move while channeling but must remain within the brush for the duration and you will be interrupted by damage. The Poro grants sight over the surrounding area until a new one is summoned or until an enemy champion enters the brush. If an enemy champion scares away the Poro, he will ping his team and then go on cooldown for a short while.
+                </p>
+            </div>
+            <div id="eyeball_collection" class="infobox">
+                <h1>Eyeball Collection</h1>
+                <img src="Runes/Eyeball_Collection_rune.png" style="width: 9vh"><br>
+                <p>
+                    Collect 2 Eyeballs from champion takedowns and 1 Eyeball from ward takedowns, up to 20. Gain 1 <span class="ap">Ability Power</span> or 0.6 <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>) per Eyeball, up to 20 <span class="ap">Ability Power</span> and 12 <span class="ad">Attack Damage</span>. Eyeball Collection has a 10 second assist timer. Completing your collection awards an additional 10 <span class="ap">Ability Power</span> or 6 <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>).
+                </p>
+            </div>
+            <div id="ravenous_hunter" class="infobox">
+                <h1>Ravenous Hunter</h1>
+                <img src="Runes/Ravenous_Hunter_rune.png" style="width: 9vh"><br>
+                <p>
+                    Heal for 2.5% (+ 2.5% per Bounty Hunter stack) of the damage dealt by your abilities. Benefits from Heal Power. Earn a Bounty Hunter stack for takedowns, up to one per unique enemy champion. Healing reduced to one third on area of effect abilities.
+                </p>
+            </div>
+            <div id="ingenious_hunter" class="infobox">
+                <h1>Ingenious Hunter</h1>
+                <img src="Runes/Ingenious_Hunter_rune.png" style="width: 9vh"><br>
+                <p>
+                    Reduces the cooldown of item actives by 10% (+ 6% per Bounty Hunter stack). This effect also applies to trinkets. Earn a Bounty Hunter stack for takedowns, up to one per unique enemy champion.
+                </p>
+            </div>
+            <div id="relentless_hunter" class="infobox">
+                <h1>Relentless Hunter</h1>
+                <img src="Runes/Relentless_Hunter_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 8 (+ 8 per Bounty Hunter stack) out-of-combat <span class="ms">Movement speed</span>. Earn a Bounty Hunter stack for takedowns, up to one per unique enemy champion.
+                </p>
+            </div>
+        </div>
+        <!-- /DOMINATION -->
+        <!-- SORCERY -->
+        <div class="sorcerydivs">
+            <div id="summon_aery" class="infobox">
+                <h1>Summon Aery</h1>
+                <img src="Runes/Summon_Aery_rune.png" style="width: 9vh"><br>
+                <p>
+                    Damaging an enemy champion signals Aery to dash to them, dealing 15 - 40 (based on level) (+ 10% <span class="ap">AP</span>) or (+ 15% bonus <span class="ad">AD</span>) <span class="adaptive">Adaptive</span> damage. Abilities targeted at allied champions signal Aery to dash to them, shielding them for 30 - 80 (based on level) (+ 25% <span class="ap">AP</span>) or (+ 40% bonus <span class="ad">AD</span>) (<span class="adaptive">Adaptive</span>).Aery lingers on the target for 2 second before flying back to you, and cannot be sent out again until she returns to you.
+                </p>
+            </div>
+            <div id="arcane_comet" class="infobox">
+                <h1>Arcane Comet</h1>
+                <img src="Runes/Arcane_Comet_rune.png" style="width: 9vh"><br>
+                <p>
+                    Damaging an enemy champion with an ability hurls an Arcane Comet at their current location, dealing 30 - 100 (based on level) (+ 20% <span class="ap">AP</span>) or (+ 40% bonus <span class="ad">AD</span>) <span class="adaptive">Adaptive</span> damage after a brief delay.
+                </p>
+            </div>
+            <div id="phase_rush" class="infobox">
+                <h1>Phase Rush</h1>
+                <img src="Runes/Phase_Rush_rune.png" style="width: 9vh"><br>
+                <p>
+                    Basic attacks and abilities generate <span class="stacks">stacks</span> on enemy champions hit, up to one per attack or cast. Applying 3 <span class="stacks">stacks</span> to a target within a 3 second period grants you 15% - 40% (based on level) <span class="ms">Movement speed</span> for 3 seconds. Melee champions also gain 75% <span class="slow">slow</span> resist for the duration.
+                </p>
+            </div>
+            <div id="nullifying_orb" class="infobox">
+                <h1>Nullifying Orb</h1>
+                <img src="Runes/Nullifying_Orb_rune.png" style="width: 9vh"><br>
+                <p>
+                    If you would take magic damage that would reduce you below 30% of your maximum <span class="hp">Health</span>, you gain a shield that absorbs 40 - 120 (based on level) (+ 10% <span class="ap">AP</span>) or (+ 15% bonus <span class="ad">AD</span>) (<span class="adaptive">Adaptive</span>) magic damage for 4 seconds.
+                </p>
+            </div>
+            <div id="manaflow_band" class="infobox">
+                <h1>Manaflow Band</h1>
+                <img src="Runes/Manaflow_Band_rune.png" style="width: 9vh"><br>
+                <p>
+                    Your next ability used has its mana or energy cost refunded, and restores 8% of your missing mana or 8% of your missing energy.
+                </p>
+            </div>
+            <div id="the_ultimate_hat" class="infobox">
+                <h1>The Ultimate Hat</h1>
+                <img src="Runes/The_Ultimate_Hat_rune.png" style="width: 9vh"><br>
+                <p>
+                    Reduces the cooldown of your ultimate ability by 5%, increased by 2% each time you cast your ultimate, up to 15% after 5 casts.
+                </p>
+            </div>
+            <div id="transcendence" class="infobox">
+                <h1>Transcendence</h1>
+                <img src="Runes/Transcendence_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 10% Cooldown reduction icon cooldown reduction at level 10. Additionally, you gain either 2 <span class="ap">Ability Power</span> or 1.2 bonus <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>) for every 1% cooldown reduction in excess of the cap.
+                </p>
+            </div>
+            <div id="celerity" class="infobox">
+                <h1>Celerity</h1>
+                <img src="Runes/Celerity_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 4% bonus <span class="ms">Movement speed</span>. Additionally, you gain bonus <span class="ap">Ability Power</span> or <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>) equal to your bonus <span class="ms">Movement speed</span> (8% in <span class="ap">Ability Power</span> or 4.8% in <span class="ad">Attack Damage</span>).
+                </p>
+            </div>
+            <div id="absolute_focus" class="infobox">
+                <h1>Absolute Focus</h1>
+                <img src="Runes/Absolute_Focus_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 3 - 24 (based on level) bonus <span class="ad">Attack Damage</span> or 5 - 40 (based on level) <span class="ap">Ability Power</span> (<span class="adaptive">Adaptive</span>) while above 70% of your maximum <span class="hp">Health</span>.
+                </p>
+            </div>
+            <div id="scorch" class="infobox">
+                <h1>Scorch</h1>
+                <img src="Runes/Scorch_rune.png" style="width: 9vh"><br>
+                <p>
+                    Your next ability hit sets champions on fire dealing 30 - 60 (based on level) bonus magic damage after 1 second.
+                </p>
+            </div>
+            <div id="waterwalking" class="infobox">
+                <h1>Water Walking</h1>
+                <img src="Runes/Waterwalking_rune.png" style="width: 9vh"><br>
+                <p>
+                    While in the river, you gain 25 bonus <span class="ms">Movement speed</span> and 5 - 30 (based on level) <span class="ap">Ability Power</span> or 3 - 18 (based on level) bonus <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>).
+                </p>
+            </div>
+            <div id="gathering_storm" class="infobox">
+                <h1>Gathering Storm</h1>
+                <img src="Runes/Gathering_Storm_rune.png" style="width: 9vh"><br>
+                <p>
+                    Every 10 minutes, gain (1 per 10 Minutes) <span class="stacks">stacks</span> of Gathering Storm. Each stack grants 8 <span class="ap">Ability Power</span> or 4.8 <span class="ad">Attack Damage</span> (<span class="adaptive">Adaptive</span>). This <span class="stacks">stacks</span> with no upper limit, for a total of 8 / 24 / 48 / 80 / 120 / ... <span class="ap">AP</span> or 5 / 14 / 29 / 48 / 72 / ... <span class="ad">AD</span> at 10 / 20 / 30 / 40 / 50 / ... minutes.
+                </p>
+            </div>
+        </div>
+        <!-- /SORCERY -->
+        <!-- RESOLVE -->
+        <div class="resolvedivs">
+            <div id="grasp_of_the_undying" class="infobox">
+                <h1>Grasp of the Undying</h1>
+                <img src="Runes/Grasp_of_the_Undying_rune.png" style="width: 9vh"><br>
+                <p>
+                    If you have dealt or received damage in the last 2 seconds, you will generate <span class="stacks">stacks</span> of Grasp of the Undying every second. At 4 <span class="stacks">stacks</span>, your next attack against an enemy champion will deal 4% of your maximum <span class="hp">Health</span> bonus magic damage, restore 2% of your maximum <span class="hp">Health</span>, and permanently grants 5 bonus <span class="hp">Health</span>. The empowered attack is primed for 6 seconds, refreshing whenever you deal or receive damage.
+                </p>
+            </div>
+            <div id="aftershock" class="infobox">
+                <h1>Aftershock</h1>
+                <img src="Runes/Aftershock_rune.png" style="width: 9vh"><br>
+                <p>
+                    Immobilizing an enemy champion grants 20 (+ 30% <span class="armor">armor</span>) bonus <span class="armor">armor</span> and 20 (+ 30% <span class="mr">magic resistance</span>) bonus <span class="mr">magic resistance</span> for 2.5 seconds. After the duration, you release a shockwave that deals 40 - 140 (based on level) (+ 3.5% of your maximum <span class="hp">Health</span>) magic damage to nearby enemies.
+                </p>
+            </div>
+            <div id="guardian" class="infobox">
+                <h1>Guardian</h1>
+                <img src="Runes/Guardian_rune.png" style="width: 9vh"><br>
+                <p>
+                    While within 175 units of an allied champion, you raise your Guard. Allied champions you affect with unit-targeted abilities are also Guarded for 2.5 seconds, irrelevant of distance. If you or a Guarded ally would take damage from an enemy champion or monster, you all first gain a shield for 60 - 150 (based on level) (+ 20% Guardian's <span class="ap">AP</span>) (+ 10% Guardian's bonus <span class="hp">Health</span>) as well as 20% bonus <span class="ms">Movement speed</span> for 1.5 seconds.
+                </p>
+            </div>
+            <div id="unflinching" class="infobox">
+                <h1>Unflinching</h1>
+                <img src="Runes/Unflinching_rune.png" style="width: 9vh"><br>
+                <p>
+                    You gain 15% <span class="slow">slow</span> resist and tenacity for 10 seconds whenever you cast a <span class="ss">Summoner Spell</span>. Additionally, you gain 10% <span class="slow">slow</span> resist and tenacity for each of your <span class="ss">Summoner Spells</span> on cooldown. These stack additively and multiplicatively respectively.
+                </p>
+            </div>
+            <div id="demolish" class="infobox">
+                <h1>Demolish</h1>
+                <img src="Runes/Demolish_rune.png" style="width: 9vh"><br>
+                <p>
+                    You generate <span class="stacks">stacks</span> on enemy structures within 600 units, up to 6 after 4 seconds. Your next attack versus a structure with 6 <span class="stacks">stacks</span> deals 125 (+ 30% of your maximum <span class="hp">Health</span>) bonus physical damage. Demolish will only go on cooldown upon triggering the damage. <span class="stacks">Stacks</span> fall off slowly if you move out of range.
+                </p>
+            </div>
+            <div id="font_of_life" class="infobox">
+                <h1>Font of Life</h1>
+                <img src="Runes/Font_of_Life_rune.png" style="width: 9vh"><br>
+                <p>
+                    Impairing the movement of an enemy champion marks them for 4 seconds. Allied champions who attack marked enemies heal for 5 (+ 1% of your maximum <span class="hp">Health</span>).
+                </p>
+            </div>
+            <div id="iron_skin" class="infobox">
+                <h1>Iron Skin</h1>
+                <img src="Runes/Iron_Skin_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 5 bonus <span class="armor">armor</span>. Additionally, you gain 5% <span class="armor">armor</span> for 3 seconds whenever you restore at least 20 <span class="hp">Health</span>, restore <span class="hp">Health</span> from a <span class="consume">Consumable</span> or are shielded.
+                </p>
+            </div>
+            <div id="mirror_shell" class="infobox">
+                <h1>Mirror Shell</h1>
+                <img src="Runes/Mirror_Shell_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 5 bonus <span class="mr">magic resistance</span>. Additionally, you gain 5% <span class="mr">magic resistance</span> for 3 seconds whenever you restore at least 20 <span class="hp">Health</span>, restore <span class="hp">Health</span> from a <span class="consume">Consumable</span> or are shielded.
+                </p>
+            </div>
+            <div id="conditioning" class="infobox">
+                <h1>Conditioning</h1>
+                <img src="Runes/Conditioning_rune.png" style="width: 9vh"><br>
+                <p>
+                    After 10 minutes gain 8 bonus <span class="armor">armor</span> and 8 bonus <span class="mr">magic resistance</span> and increases your total <span class="armor">armor</span> and <span class="mr">magic resistance</span> by 5%.
+                </p>
+            </div>
+            <div id="overgrowth" class="infobox">
+                <h1>Overgrowth</h1>
+                <img src="Runes/Overgrowth_rune.png" style="width: 9vh"><br>
+                <p>
+                    Every 8 monsters or enemy minions that die near you permanently increase your maximum <span class="hp">Health</span> by 0.2%.
+                </p>
+            </div>
+            <div id="revitalize" class="infobox">
+                <h1>Revitalize</h1>
+                <img src="Runes/Revitalize_rune.png" style="width: 9vh"><br>
+                <p>
+                    Grants 5% Heal and Shield Power. Outgoing healing and shielding is increased by 10% versus targets below 40% <span class="hp">Health</span>. Self-healing and self-shielding is increased by 10% while you are below 40% <span class="hp">Health</span>.
+                </p>
+            </div>
+            <div id="second_wind" class="infobox">
+                <h1>Second Wind</h1>
+                <img src="Runes/Second_Wind_rune.png" style="width: 9vh"><br>
+                <p>
+                    After taking damage from an enemy champion, you heal for 6 (+ 4% of your missing <span class="hp">Health</span>) over 10 seconds.
+                </p>
+            </div>
+        </div>
+        <!-- /RESOLVE -->
+        <!-- INSPIRATION -->
+        <div class="inspirationdivs">
+            <div id="unsealed_spellbook" class="infobox">
+                <h1>Unsealed Spellbook</h1>
+                <img src="Runes/Unsealed_Spellbook_rune.png" style="width: 9vh"><br>
+                <p>
+                    Reduces the cooldown of <span class="ss">Summoner Spells</span> by 25%. Additionally, you may swap your <span class="ss">Summoner Spells</span> while at the shop by exchanging Summoner Shards. You gain your first Summoner Shard at 2:00, and gain another every 6 minutes thereafter, up to a maximum of 2 at a time. Newly acquired spells are acquired on their own cooldown. You may not have two instances of the same <span class="ss">Summoner Spell</span>. Swapping to Smite during a game will not grant access to jungler items.
+                </p>
+            </div>
+            <div id="glacial_augment" class="infobox">
+                <h1>Glacial Augment</h1>
+                <img src="Runes/Glacial_Augment_rune.png" style="width: 9vh"><br>
+                <p>
+                    Basic attacks <span class="slow">slow</span> enemy champions for 1.5 seconds, which increases over the duration. This effect cannot occur on the same target more than once every few seconds. <span class=" slow ">Slowing</span> an enemy champion with an item active triggers your Freeze Ray to fire a laser that cuts an X-unit line through the ground in their direction, creating a <span class=" slow ">Slowing</span> field for 5 seconds that <span class=" slow ">slows</span> units inside by 50%.
+                </p>
+            </div>
+            <!-- Se tiver mesmo com atenção, pode verificar que existem duas imagens associadas aqui ao div debaixo. Não sei se tem acompanhado a pre season assim tão bem, mas esta imagem encaixa indubitavelmente aqui ;) -->
+            <div id="kleptomancy" class="infobox">
+                <h1>Kleptomancy</h1>
+                <img src="backgrounds/chibi_ezreal_by_bunnyhana-d49gynb.png" style="width: 9vh"><img src="Runes/Kleptomancy_rune.png" style="width: 9vh"><br>
+                <p>
+                    After using an ability, your next basic attack within 10 seconds has 25 bonus range. If the attack is against a champion, you gain 5 <span class="gold">Gold</span>. Occasionally, you will gain a <span class="consume">Consumable</span> item instead. If you gain a <span class="consume">Consumable</span> item while your inventory is full, the <span class="consume">Consumable</span> will instead be consumed.
+                </p>
+            </div>
+            <div id="hextech_flashtraption" class="infobox">
+                <h1>Hextech Flashtraption</h1>
+                <img src="Runes/Hextech_Flashtraption_rune.png" style="width: 9vh"><br>
+                <p>
+                    While Flash is on cooldown, it is replaced by Hexflash.<br>FIRST CAST: You begin channeling, increasing Hexflash's range over the next 2.5 seconds. After at least 1 second, you can reactive the ability. Releasing the button earlier than 1 second or entering combat with a champion will put Hexflash on cooldown for 10 seconds.<br>SECOND CAST: You blink to the target location within range.
+                </p>
+            </div>
+            <div id="biscuit_delivery" class="infobox">
+                <h1>Biscuit Delivery</h1>
+                <img src="Runes/Biscuit_Delivery_rune.png" style="width: 9vh"><br>
+                <p>
+                    Receive a Total Biscuit of Everlasting Will item Total Biscuit of Everlasting Will at 3:00, 6:00, 9:00 and 12:00. If the inventory is full while receiving a biscuit, the biscuit(s) will appear as soon as a place in the inventory is freed. Consume a Biscuit to restore 15% of your missing <span class="hp">Health</span> and 15% of your missing mana over 15 seconds, as well as permanently increasing your maximum mana by 40. You will also gain the increased mana if you sell the biscuit for 30 <span class="gold">Gold</span>.
+                </p>
+            </div>
+            <div id="perfect_timing" class="infobox">
+                <h1>Perfect Timing</h1>
+                <img src="Runes/Perfect_Timing_rune.png" style="width: 9vh"><br>
+                <p>
+                    Receive a Stopwatch item Replica Stopwatch at 6 minutes. The Replica Stopwatch is identical to the Stopwatch item Stopwatch, except it has only half the value and so costs 300 <span class="gold">Gold</span> more to upgrade.
+                </p>
+            </div>
+            <div id="magical_footwear" class="infobox">
+                <h1>Magical Footwear</h1>
+                <img src="Runes/Magical_Footwear_rune.png" style="width: 9vh"><br>
+                <p>
+                    At 10 minutes (-30 seconds per Takedown), you gain Slightly Magical Boots for free. Slightly Magical Boots are identical and can be upgraded as if Boots of Speed, except that its upgrades cost 50 <span class="gold">Gold</span> less. Additionally, your boots gain 10 bonus <span class="ms">Movement speed</span> icon <span class="ms">Movement speed</span>.
+                </p>
+            </div>
+            <div id="futures_market" class="infobox">
+                <h1>Future's Mark</h1>
+                <img src="Runes/Future's_Market_rune.png" style="width: 9vh"><br>
+                <p>
+                    You can enter debt to buy items, up to 150 <span class="gold">Gold</span> (+ 5 <span class="gold">Gold</span> per Minute), which is displayed as negative <span class="gold">Gold</span> in your treasury. A 50 <span class="gold">Gold</span> lending fee is added on to the amount of money you owe after leaving the store. You cannot borrow money before 2:00.
+                </p>
+            </div>
+            <div id="minion_dematerializer" class="infobox">
+                <h1>Minion Dematerializer</h1>
+                <img src="Runes/Minion_Dematerializer_rune.png" style="width: 9vh"><br>
+                <p>
+                    Start the game with 6 × Minion Dematerializers, which can be activated to execute the target Melee minion, Caster minion or Siege minion. Dematerializers begin the game on a 155 second cooldown. In addition to the kill <span class="gold">Gold</span> and experience for the kill, you also gain 4% increased damage to that type of minion for the remainder of the game. Dematerializers beyond the first used on the same type of minion increases this bonus by 1%.
+                </p>
+            </div>
+            <div id="cosmic_insight" class="infobox">
+                <h1>Cosmic Insight</h1>
+                <img src="Runes/Cosmic_Insight_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 5% cooldown reduction and increases the cooldown reduction cap to 45%. Additionally, reduces the cooldown of <span class="ss">Summoner Spells</span> and item actives by 5%.
+                </p>
+            </div>
+            <div id="approach_velocity" class="infobox">
+                <h1>Approach Velocity</h1>
+                <img src="Runes/Approach_Velocity_rune.png" style="width: 9vh"><br>
+                <p>
+                    Gain 10% bonus <span class="ms">Movement speed</span> when moving toward an movement impaired allied champion, or toward an enemy champion whose movement you have impaired.
+                </p>
+            </div>
+            <div id="celestial_body" class="infobox">
+                <h1>Celestial Body</h1>
+                <img src="Runes/Celestial_Body_rune.png" style="width: 9vh"><br>
+                <p>
+                    Permanently gain 100 bonus <span class="hp">Health</span>, but deal 10% less damage to enemy champions and monsters for the first 10 minutes.
+                </p>
+            </div>
+        </div>
+        <div id="conbinationsbox">
+            <h1><u>Secondary Path</u></h1><br>
+            <h3 style="color: rgba(216, 216, 216, 0.54)">(Click on one of the Paths to find what benifits Secondary Paths have on that Tree)</h3>
+        </div>
+        <div id="cprecision" class="secondarys">
+            <div class="yellow" style="text-align: center">
+                <h1 style="font-size: 22px"><u>Secondary Path</u></h1>
+            </div>
+            <p style="text-align: center">+18% <span class="as">Attack Speed</span></p><br>
+            <table id="table2">
+                <tr>
+                    <th><img src="Paths/domination.png" style="width: 6vh"></th>
+                    <th><img src="Paths/sorcery.png" style="width: 6vh"></th>
+                    <th><img src="Paths/bullshit.png" style="width: 6vh"></th>
+                    <th><img src="Paths/inspiration.png" style="width: 6vh"></th>
+                </tr>
+                <tr>
+                    <td class="red">The Merciless Elite</td>
+                    <td class="purple">The Brazen Perfect</td>
+                    <td class="green">The Eternal Champion</td>
+                    <td class="aquamarine">The Savant</td>
+                </tr>
+            </table>
+        </div>
+        <div id="cdomination" class="secondarys">
+            <div class="red" style="text-align: center">
+                <h1 style="font-size: 22px"><u>Secondary Path</u></h1>
+            </div>
+            <p style="text-align: center">+18 <span class="ap">AP</span> or 10.8 bonus <span class="ad">AD</span> (<span class="adaptive">Adaptive</span>)</p><br>
+            <table id="table2">
+                <tr>
+                    <th><img src="Paths/precision.png" style="width: 6vh"></th>
+                    <th><img src="Paths/sorcery.png" style="width: 6vh"></th>
+                    <th><img src="Paths/bullshit.png" style="width: 6vh"></th>
+                    <th><img src="Paths/inspiration.png" style="width: 6vh"></th>
+                </tr>
+                <tr>
+                    <td class="yellow">The Glorious Executioner</td>
+                    <td class="purple">The Aether Blade</td>
+                    <td class="green">The Immortal Butcher</td>
+                    <td class="aquamarine">The Ingenious Hunter</td>
+                </tr>
+            </table>
+        </div>
+        <div id="csorcery" class="secondarys">
+            <div class="purple" style="text-align: center">
+                <h1 style="font-size: 22px"><u>Secondary Path</u></h1>
+            </div>
+            <p style="text-align: center">+25 <span class="ap">AP</span> or 15 bonus <span class="ad">AD</span> (<span class="adaptive">Adaptive</span>)</p><br>
+            <table id="table2">
+                <tr>
+                    <th><img src="Paths/precision.png" style="width: 6vh"></th>
+                    <th><img src="Paths/domination.png" style="width: 6vh"></th>
+                    <th><img src="Paths/bullshit.png" style="width: 6vh"></th>
+                    <th><img src="Paths/inspiration.png" style="width: 6vh"></th>
+                </tr>
+                <tr>
+                    <td class="yellow">The Incontestable Spellsliger</td>
+                    <td class="red">The Calamity</td>
+                    <td class="green">The Ancient One</td>
+                    <td class="aquamarine">The Cryptic</td>
+                </tr>
+            </table>
+        </div>
+        <div id="cresolve" class="secondarys">
+            <div class="green" style="text-align: center">
+                <h1 style="font-size: 22px"><u>Secondary Path</u></h1>
+            </div>
+            <p style="text-align: center">+130 bonus <span class="hp">Health</span></p><br>
+            <table id="table2">
+                <tr>
+                    <th><img src="Paths/precision.png" style="width: 6vh"></th>
+                    <th><img src="Paths/domination.png" style="width: 6vh"></th>
+                    <th><img src="Paths/sorcery.png" style="width: 6vh"></th>
+                    <th><img src="Paths/inspiration.png" style="width: 6vh"></th>
+                </tr>
+                <tr>
+                    <td class="yellow">The Imperious Behemoth</td>
+                    <td class="red">The Leviathan</td>
+                    <td class="purple">The Arcane Colossus</td>
+                    <td class="aquamarine">The Enlightened Titan</td>
+                </tr>
+            </table>
+        </div>
+        <div id="cinspiration" class="secondarys">
+            <div class="aquamarine" style="text-align: center">
+                <h1 style="font-size: 22px"><u>Secondary Path</u></h1>
+            </div>
+            <p style="text-align: center"><span class="consume">Consumables</span> last 20% longer, *(+bonus stats based on the secondary path)</p><br>
+            <table id="table2">
+                <tr>
+                    <th><img src="Paths/precision.png" style="width: 6vh"></th>
+                    <th><img src="Paths/domination.png" style="width: 6vh"></th>
+                    <th><img src="Paths/sorcery.png" style="width: 6vh"></th>
+                    <th><img src="Paths/bullshit.png" style="width: 6vh"></th>
+                </tr>
+                <tr>
+                    <td class="yellow">The Virtuoso</td>
+                    <td class="red">The Ruthless Visionary</td>
+                    <td class="purple">The Stargazer</td>
+                    <td class="green">The Timeless</td>
+                </tr>
+            </table>
+        </div>
+        <div id="ulist">
+            <p>(*)</p>
+            <p><span class="adaptive">Adaptive</span> damage is a new mechanic introduced in League. It means that you receive either the bonus <span class="ap">AP</span> or the bonus <span class="ad">AD</span>, depending the value of <span class="ap">AP</span> and <span class="ad">AD</span> you have gained through items.</p>
+            <ul>
+                <li>inspiration + precision - +20% <span class="as">Attack Speed</span></li>
+                <li>inspiration + domination - +27 <span class="ap">Ability Power</span> or +16.2 bonus <span class="ad">Attack Damage</span>(<span class="adaptive">Adaptive</span>)</li>
+                <li>inspiration + sorcery - +27 <span class="ap">Ability Power</span> or +16.2 bonus <span class="ad">Attack Damage</span>(<span class="adaptive">Adaptive</span>)</li>
+                <li>inspiration + resolve - +145 bonus <span class="hp">Health</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+
+    <!--Básico para todas as páginas-->
+
+</body>
+
+</html>

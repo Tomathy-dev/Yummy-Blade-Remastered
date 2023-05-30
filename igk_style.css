@@ -1,0 +1,96 @@
+body {
+    background-color: #001426;
+    margin: 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+h2 {
+    font-size: 40px;
+    color: orange;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.47);
+}
+
+p {
+    font-size: 21px;
+}
+
+.divs li {
+    line-height: 1.5;
+    color: #ffa600;
+    font-size: 1.4vw;
+    font-family: "Cabin";
+}
+
+.divs li a {
+    color: #4991d3;
+}
+
+.lb {
+    color: #4991d3;
+}
+
+.lo {
+    color: #ffa600;
+}
+
+.lgreen {
+    color: #21de9f;
+}
+
+.lr {
+    color: #ff0000;
+}
+
+.lp {
+    color: #ed2591;
+}
+
+.lw {
+    color: #ffffff;
+}
+
+.lgray {
+    color: #a5a5a5;
+}
+
+.lbrown {
+    color: #804a00;
+}
+
+.top p {
+    color: aqua;
+    font-size: 1.5vw;
+    font-family: "cabin";
+    position: fixed;
+    left: 80%;
+    bottom: 1%;
+}
+
+.divs {
+    width: 60%;
+    margin-left: 5%;
+    border-left: 2px #ffb731 solid;
+    padding-left: 1%;
+    display: inline-block;
+}
+
+.divs a{
+    font-family: "Hind";
+    font-size: 1.3vw;
+}
+
+.divs p{
+    font-family: "Hind";
+    font-size: 1.3vw;
+}
+#gold_calculator {
+    width: 26%;
+    border-right: 2px #ffb731 solid;
+    margin-right: 5%;
+    padding-left: 1%;
+    float: right;
+}
+#gold_calculator input {
+    
+}

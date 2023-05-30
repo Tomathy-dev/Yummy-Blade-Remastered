@@ -1,0 +1,348 @@
+<!DOCTYPE html><!-- base das paginas -->
+<html>
+    <head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="c_style.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="general.js"></script>
+</head>
+
+<body onload="verifyId();">
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+    <div id="identification">
+        <table>
+            <tr>
+                <td>
+                    <div id="userdisplaygeneral"></div>
+                </td>
+                <td style="text-align: center">
+                    <div id="rankerinogeneral"></div>
+                </td>
+                <td>
+                    <div id="avatargeneral"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div class="champdiv">
+        <!-- INTRODUCTION TO CHAMPIONS -->
+        <h2>Champions</h2>
+        <p>Champions are player-controlled characters. Each one has its unique stats, ability sets, strengths and weaknesses.</p>
+        <p>There´s a wide variety of champions you can pick (if you own them all). Currently, there's 139 different champions. Let's explore each one of them:</p>
+    </div>
+    <div id="table">
+        <table>
+            <!-- ALL 136 CHAMPIONS -->
+            <tbody>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/aatrox/"><img src="Champions/AatroxSquare.png"><br>Aatrox</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ahri/"><img src="Champions/ahri.png"><br>Ahri</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/akali/"><img src="Champions/AkaliSquare.png"><br>Akali</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/alistar/"><img src="Champions/AlistarSquare.png"><br>Alistar</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/amumu/"><img src="Champions/AmumuSquare.png"><br>Amumu</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/anivia/"><img src="Champions/AniviaSquare.png"><br>Anivia</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/annie/"><img src="Champions/AnnieSquare.png"><br>Annie</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ashe/"><img src="Champions/Ashe_Square.png"><br>Ashe</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/aurelionsol/"><img src="Champions/Aurelion_SolSquare.png"><br>Aurelion Sol</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/azir/"><img src="Champions/AzirSquare.png"><br>Azir</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/bard/"><img src="Champions/BardSquare.png"><br>Bard</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/blitzcrank/"><img src="Champions/BlitzcrankSquare.png"><br>Blitzcrank</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/brand/"><img src="Champions/BrandSquare.png"><br>Brand</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/braum/"><img src="Champions/BraumSquare.png"><br>Braum</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/caitlyn/"><img src="Champions/CaitlynSquare.png"><br>Caitlyn</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/camille/"><img src="Champions/CamilleSquare.png"><br>Camille</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/cassiopeia/"><img src="Champions/CassiopeiaSquare.png"><br>Cassiopeia</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/chogath/"><img src="Champions/Cho'GathSquare.png"><br>Cho'Gath</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/corki/"><img src="Champions/Corki.png"><br>Corki</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/darius/"><img src="Champions/darius.png"><br>Darius</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/diana/"><img src="Champions/DianaSquare.png"><br>Diana</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/drmundo/"><img src="Champions/Dr._MundoSquare.png"><br>Dr. Mundo</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/draven/"><img src=Champions/DravenSquare.png><br>Draven</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ekko/"><img src="Champions/ekko.png"><br>Ekko</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/elise/"><img src="Champions/EliseSquare.png"><br>Elise</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/evelynn/"><img src="Champions/EvelynnSquare.png"><br>Evelynn</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ezreal/"><img src="Champions/Ezreal.jpg"><br>Ezreal</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/fiddlesticks/"><img src="Champions/FiddlesticksSquare.png"><br>Fiddlesticks</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/fiora/"><img src="Champions/FioraSquare.png"><br>Fiora</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/fizz/"><img src="Champions/FizzSquare.png"><br>Fizz</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/galio/"><img src="Champions/GalioSquare.png"><br>Galio</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/gangplank/"><img src="Champions/GangplankSquare.png"><br>Gangplank</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/garen/"><img src="Champions/GarenSquare.png"><br>Garen</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/gnar/"><img src="Champions/GnarSquare.png"><br>Gnar</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/gragas/"><img src="Champions/GragasSquare.png"><br>Gragas</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/graves/"><img src="Champions/GravesSquare.png"><br>Graves</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/hecarim/"><img src="Champions/HecarimSquare_old.png"><br>Hecarim</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/heimerdinger/"><img src="Champions/HeimerdingerSquare.png"><br>Heimerdinger</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/illaoi/"><img src="Champions/IllaoiSquare.png"><br>Illaoi</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/irelia/"><img src="Champions/IreliaSquare.png"><br>Irelia</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ivern/"><img src="Champions/IvernSquare.png"><br>Ivern</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/janna/"><img src="Champions/JannaSquare.png"><br>Janna</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/jarvaniv/"><img src="Champions/Jarvan_IVSquare.png"><br>Jarvan IV</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/jax/"><img src="Champions/JaxSquare.png"><br>Jax</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/jayce/"><img src="Champions/JayceSquare.png"><br>Jayce</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/jhin/"><img src="Champions/JhinSquare.png"><br>Jhin</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/jinx/"><img src="Champions/JinxSquare.png"><br>Jinx</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kalista/"><img src="Champions/KalistaSquare.png"><br>Kalista</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/karma/"><img src="Champions/KarmaSquare.png"><br>Karma</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/karthus/"><img src="Champions/KarthusSquare.png"><br>Karthus</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kassadin/"><img src="Champions/KassadinSquare.png"><br>Kassadin</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/katarina/"><img src="Champions/KatarinaSquare.png"><br>Katarina</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kayle/"><img src="Champions/KayleSquare.png"><br>Kayle</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kayn/"><img src="Champions/KaynSquare.png"><br>Kayn</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kennen/"><img src="Champions/KennenSquare_old2.png"><br>Kennen</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/khazix/"><img src="Champions/Kha'ZixSquare.png"><br>Kha'Zix</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kindred/"><img src="Champions/KindredSquare.png"><br>Kindred</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kled/"><img src="Champions/Kled_Square.png"><br>Kled</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/kogmaw/"><img src="Champions/Kog'MawSquare.png"><br>Kog'Maw</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/leblanc/"><img src="Champions/LeBlancSquare.png"><br>LeBlanc</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/leesin/"><img src="Champions/Lee_SinSquare.png"><br>Lee Sin</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/leona/"><img src="Champions/LeonaSquare.png"><br>Leona</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/lissandra/"><img src="Champions/LissandraSquare.png"><br>Lissandra</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/lucian/"><img src="Champions/LucianSquare.png"><br>Lucian</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/lulu/"><img src="Champions/LuluSquare.png"><br>Lulu</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/lux/"><img src="Champions/LuxSquare.png"><br>Lux</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/malphite/"><img src="Champions/MalphiteSquare.png"><br>Malphite</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/malzahar/"><img src="Champions/MalzaharSquare.png"><br>Malzahar</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/maokai/"><img src="Champions/MaokaiSquare.png"><br>Maokai</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/masteryi/"><img src="Champions/Master_YiSquare.png"><br>Master Yi</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/missfortune/"><img src="Champions/Miss_FortuneSquare.png"><br>Miss Fortune</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/mordekaiser/"><img src="Champions/MordekaiserSquare.png"><br>Mordekaiser</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/morgana/"><img src="Champions/MorganaSquare.png"><br>Morgana</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nami/"><img src="Champions/NamiSquare.png"><br>Nami</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nasus/"><img src="Champions/NasusSquare.png"><br>Nasus</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nautilus/"><img src="Champions/NautilusSquare.png"><br>Nautilus</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nidalee/"><img src="Champions/NidaleeSquare.png"><br>Nidalee</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nocturne/"><img src="Champions/NocturneSquare.png"><br>Nocturne</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/nunu/"><img src="Champions/NunuSquare.png"><br>Nunu</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/olaf/"><img src="Champions/OlafSquare.png"><br>Olaf</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/orianna/"><img src="Champions/OriannaSquare.png"><br>Orianna</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ornn/"><img src="Champions/OrnnSquare.png"><br>Ornn</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/pantheon/"><img src="Champions/PantheonSquare.png"><br>Pantheon</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/poppy/"><img src="Champions/PoppySquare.png"><br>Poppy</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/quinn/"><img src="Champions/QuinnSquare.png"><br>Quinn</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/rakan/"><img src="Champions/RakanSquare.png"><br>Rakan</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/rammus/"><img src="Champions/RammusSquare.png"><br>Rammus</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/reksai/"><img src="Champions/Rek'SaiSquare.png"><br>Rek'Sai</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/renekton/"><img src="Champions/RenektonSquare.png"><br>Renekton</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/rengar/"><img src="Champions/RengarSquare.png"><br>Rengar</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/riven/"><img src="Champions/Riven.png"><br>Riven</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/rumble/"><img src="Champions/RumbleSquare.png"><br>Rumble</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ryze/"><img src="Champions/RyzeSquare.png"><br>Ryze</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/sejuani/"><img src="Champions/Sejuani.png"><br>Sejuani</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/shaco/"><img src="Champions/ShacoSquare.jpg"><br>Shaco</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/shen/"><img src="Champions/ShenSquare.png"><br>Shen</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/shyvana/"><img src="Champions/ShyvanaSquare.png"><br>Shyvana</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/singed/"><img src="Champions/SingedSquare.png"><br>Singed</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/sion/"><img src="Champions/Sion.png"><br>Sion</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/sivir/"><img src=Champions/Sivir.png><br>Sivir</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/skarner/"><img src="Champions/Skarner.png"><br>Skarner</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/sona/"><img src="Champions/Sona.png"><br>Sona</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/soraka/"><img src="Champions/SorakaSquare.png"><br>Soraka</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/swain/"><img src="Champions/SwainSquare.png"><br>Swain</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/syndra/"><img src="Champions/Syndra.png"><br>Syndra</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/tahmkench/"><img src="Champions/Tahm_KenchSquare.png"><br>Tahm Kench</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/taliyah/"><img src="Champions/TaliyahSquare.png"><br>Taliyah</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/talon/"><img src="Champions/TalonSquare.png"><br>Talon</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/taric/"><img src="Champions/taric.png"><br>Taric</a></td>
+                    <td id="teemo"><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/teemo/"><img src="Champions/teemo_boi.jpg"><br>Teemo</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/thresh/"><img src="Champions/ThreshSquare.png"><br>Thresh</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/tristana/"><img src="Champions/TristanaSquare.png"><br>Tristana</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/trundle/"><img src="Champions/TrundleSquare.png"><br>Trundle</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/tryndamere/"><img src="Champions/tryndamere.png"><br>Tryndamere</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/twistedfate/"><img src="Champions/TwistedFateSquare1.png"><br>Twisted Fate</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/twitch/"><img src="Champions/Twitch.png"><br>Twitch</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/udyr/"><img src="Champions/UdyrSquare.png"><br>Udyr</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/urgot/"><img src="Champions/Urgot.png"><br>Urgot</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/varus/"><img src="Champions/Varus.png"><br>Varus</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/vayne/"><img src="Champions/VayneSquare.png"><br>Vayne</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/veigar/"><img src="Champions/VeigarSquare.png"><br>Veigar</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/velkoz/"><img src="Champions/Velkoz.png"><br>Vel'Koz</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/vi/"><img src="Champions/Vi.png"><br>Vi</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/viktor/"><img src="Champions/ViktorSquare.png"><br>Viktor</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/vladimir/"><img src="Champions/Vladimir.png"><br>Vladimir</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/volibear/"><img src="Champions/VolibearSquare.png"><br>Volibear</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/warwick/"><img src="Champions/warwick-full.png"><br>Warwick</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/wukong/"><img src="Champions/Wukong.png"><br>Wukong</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/xayah/"><img src="Champions/XayahSquare.png"><br>Xayah</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/xerath/"><img src="Champions/Xerath.png"><br>Xerath</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/xinzhao/"><img src="Champions/XinZhao.png"><br>Xin Zhao</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/yasuo/"><img src="Champions/yasuo.png"><br>Yasuo</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/yorick/"><img src="Champions/YorickSquare.png"><br>Yorick</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/zac/"><img src="Champions/Zac.png"><br>Zac</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/zed/"><img src="Champions/Zed.png"><br>Zed</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/ziggs/"><img src="Champions/Ziggs.png"><br>Ziggs</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/zilean/"><img src="Champions/ZileanSquare2.png"><br>Zilean</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/zoe/"><img src="Champions/Zoe.png"><br>Zoe</a></td>
+                    <td><a target="_blank" href="https://universe.leagueoflegends.com/en_GB/champion/zyra/"><img src="Champions/ZyraSquare.png"><br>Zyra</a></td>
+                </tr>
+        </table>
+    </div><br><br><br>
+    <div id="roles" class="champdiv2">
+        <!-- INTRODUCTION TO ROLES -->
+        <h2>Champion Roles</h2>
+        <p>Although every champion is unique, we can categorize champion into a spectrum of 6 roles. Some champions are not bound by only one role but can share the characteristics of multile roles.</p>
+        <p>Now let's explore the 6 current champion roles:</p>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="hansolo"><img src="Roles/role1.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Mages</u></span>- Mages are powerfull spell caster who us their abilities to inflict <span style="color: #3333f5">magic damage</span> and disrupt enemies. They usually have low <span style="color: yellow">defense stats</span> to balance out their huge offensive capability.</td>
+                </tr>
+                <tr>
+                    <td><img src="Roles/role5.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Marksman</u></span>- Marksmen or Attack Damage Carries (ADC's) primarly use their ranged <span style="color: red">auto-attacks</span> to show their damage output. They focus on inflicting the most damage per second (<span style="color:red">DPS</span>) on a single target. The downside is that by betting on a <span style="color: red">full damage/DPS</span> build, ADC's become easy targets to kill (due to their "<span style="color: yellow">squishiness</span>"), so these types of champions need to be constantly repositioning in a fight so enemies don't get the chance to bully them.</td>
+                </tr>
+                <tr>
+                    <td><img src="Roles/role2.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Tanks</u></span>- Tanks are usually <span style="color: red">melee champions</span> who, as the name might suggest, have very high <span style="color: yellow">defensive stats</span>. But, contradictory to the name, have a low damage output. Their job is to disrupt and disable enemy champions while soaking up damage from the other team. They are normally the front-liners of a battle, with the purpose of protecting their own team.</td>
+                </tr>
+                <tr>
+                    <td><img src="Roles/role3.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Supports</u></span>- Supports help allies by <span style="color: #ff6a84">shielding, healing</span> or <span style="color: #ff6a84"> empowering</span> them. They excell at <span style="color: #ff6a84">utility</span>, providing assistance to teammates, at the exchange of low damage dealing. </td>
+                </tr>
+                <tr>
+                    <td><img src="Roles/role4.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Fighters</u></span>- Fighters are typically <span style="color:red">melee</span> champions with the ability to not only inflict a good portion of <span style="color: red">attack damage</span> but also be able to <span style="color yellow">tank</span> some damage from enemies. These kinds of champions are usually perfect for dueling, since they have the perfect balance between <span style="color:red">damage</span> output and <span style="color=yellow">survivability</span>.</td>
+                </tr>
+                <tr>
+                    <td><img src="Roles/role0.png"></td>
+                    <td><span style="color: green; font-size: 18px"><u>Assassins</u></span>- Assassins are champions with a high mobility kit and capable of inflicting tons of damage in the lowest amount of time possible (<span style="color: #ffaa37">burst damage</span>). The downside is the high risk these characters take. If your <span style="color: #ffaa37">burst damage</span> is wasted, it's extremely hard for an assassin to then duel or escape fights with enemies.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Básico para todas as páginas-->
+
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+
+    <!--Básico para todas as páginas-->
+
+</body>
+</html>

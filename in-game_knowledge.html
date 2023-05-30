@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- base das paginas -->
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="igk_style.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="general.js"></script>
+    <script src="igk_script.js"></script>
+</head>
+
+<body onload="verifyId();">
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+    <div id="identification">
+        <table>
+            <tr>
+                <td>
+                    <div id="userdisplaygeneral"></div>
+                </td>
+                <td style="text-align: center">
+                    <div id="rankerinogeneral"></div>
+                </td>
+                <td>
+                    <div id="avatargeneral"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div class="divs">
+        <!-- INDEX -->
+        <h2 id="igk">In-Game Knowledge</h2>
+        <p>First and foremost, this is a really broad topic, so we'll talk about the most important things. Here is an index to make navegation easier:</p>
+        <ol>
+            <li><a href="#stat">Statistics</a></li>
+            <li><a href="#dmg">Damage</a></li>
+            <li><a href="#gold">Gold</a></li>
+            <li><a href="#minion">Minions</a></li>
+            <li><a href="#jungle">Jungle Camps</a></li>
+            <li><a href="#turret">Turrets</a></li>
+        </ol>
+    </div>
+    <div id="stat" class="divs">
+        <!-- STATISTICS -->
+        <h2>Statistics</h2>
+        <p><span class="lb">Statistics</span> can be divided into 2 categories:</p>
+        <ul>
+            <li><span class="lb">Base Statistics</span></li>
+            <li><span class="lb">Bonus Statistics</span></li>
+        </ul>
+        <!-- BASE STATISTICS -->
+        <p class="center"><span class="lo">Base Statistics</span></p>
+        <p><span class="lb">Base Statistics</span> are those that every champion have (manaless <span class="lo">Champions</span> being an exception), even without outside sources like items.</p>
+        <ul class="dif_li">
+            <li>Health (HP):<span class="lw"> The amount of <span class="lr">damage</span> a <span class="lb">Unit</span> or <span class="lb">Structure</span> can take before <span class="lb">Dying</span> or being <span class="lb">destroyed</span>.</span>
+            </li>
+            <li>Health Regeneration (HP Regen):<span class="lw"> The amount of <span class="lb">HP</span> a <span class="lb">Unit</span> or <span class="lb">Structure</span> regenerates over a <span class="lb">5-second</span> period. Effectively happens every <span class="lb">half-second</span>. It is considered a form of <span class="lb">Healing</span>.</span>
+            </li>
+            <li>Mana (MP):<span class="lw"> It is the most common resource <span class="lo">Champions</span> use to cast <span class="lb">Abilities</span>.</span>
+            </li>
+            <li>Mana Regeneration (MP Regen): <span class="lw">Similar to <span class="lb">HP Regen</span>, but affects <span class="lb">Mana</span> instead of <span class="lb">Health</span>.</span>
+            </li>
+            <li>Energy:<span class="lw"> The equivalent of <span class="lb">Mana</span> for a few champions. cannot be increased.</span>
+            </li>
+            <li>Energy Regeneration:<span class="lw"> The equivalent of <span class="lb">MP Regen</span> for <span class="lb">Energy</span> users.</span>
+            </li>
+            <li>Attack Damage (AD):<span class="lw"> The amount of <span class="lr">damage</span> a <span class="lb">Unit</span> or <span class="lb">Structure</span> deals with <span class="lb">Basic Attacks</span> and some <span class="lb">Abilities</span> that also scale with <span class="lb">AD</span>.</span>
+            </li>
+            <li>Attack Speed (AS):<span class="lw"> The frequency of a <span class="lo">Champion</span>'s basic attacks.</span>
+            </li>
+            <li>Attack Delay (or Attack Speed Offset) :<span class="lw"> A hidden Variable used to calculate a <span class="lo">Champion</span>'s effective <span class="lb">Attack Speed</span>.</span>
+            </li>
+            <li>Armor:<span class="lw"> A Statistic that reduces the <span class="lr">damage</span> taken from <span class="lb">Physical Damage</span>.</span>
+            </li>
+            <li>Magic Resistance (MR):<span class="lw"> A Statistic that reduces the <span class="lr">damage</span> taken from <span class="lb">Magical Damage</span>.</span>
+            </li>
+            <li>Range:<span class="lw"> A measurement used to determine how far a <span class="lb">Basic Attack</span> or <span class="lb">Ability</span> can reach</span>.</li>
+            <li>Movement Speed (MS):<span class="lw"> The rate at which a <span class="lo">Champion</span> travels across the map.</span>
+            </li>
+            <li>Gold Generation:<span class="lw"> The amount of <span class="lo">Gold</span> earned automatically over a 10-second period.</span>
+            </li>
+            <!-- BONUS STATISTICS -->
+            <p class="center"><span class="lo">Bonus Statistics</span></p>
+            <p><span class="lb">Bonus Statistics</span> are those that only come from <span class="lb">Abilities</span>, <span class="lb">Passives</span>, <span class="lb">Items</span>, and <span class="lb">Runes</span>.</p>
+            <li>Ability Power (AP):<span class="lw"> The <span class="lb">Attack Damage</span> equivalent of most <span class="lb">Abilities</span>.</span>
+            </li>
+            <li>Cooldown Reduction (CDR):<span class="lw"> Reduces <span class="lb">Abilities</span>' <span class="lb">Cooldowns</span> by a percentage, usually up to <span class="lb">40%</span>.</span>
+            </li>
+            <li>Magic Penetration (Magic Pen):<span class="lw"> Reduces the effectiveness of a <span class="lr">Target</span>'s <span class="lb">Magic Resistance</span>.</span>
+            </li>
+            <li>Armor Penetration (Armor Pen):<span class="lw"> Reduces the effectiveness of a <span class="lr">Target</span>'s <span class="lb">Armor</span>.</span>
+            </li>
+            <li>Lethality:<span class="lw"> Grants <span class="lb">Flat Armor Penetration</span> through a formula also involving both the <span class="lb">source</span> and the <span class="lr">target</span>'s levels.</span>
+            </li>
+            <li>Critical Strike Chance (Crit):<span class="lw"> The chance a <span class="lo">Champion</span> has to inflict a <span class="lb">Critical Strike</span> with their <span class="lb">Basic Attacks</span> or some <span class="lb">Abilities</span>. Measured in Percentage.</span>
+            </li>
+            <li>Critical Strike Damage (Crit Dmg):<span class="lw"> The amount of <span class="lr">Damage</span> a <span class="lb">Critical Strike</span> does. Default is 200% <span class="lr">Damage</span></span>.</li>
+            <li>Tenacity:<span class="lw"> Reduces the duration of <span class="lb">Crowd Control</span> effects by a percentage, with few exceptions.</span>
+            </li>
+            <li>Life Steal (LS):<span class="lw"> The amount of <span class="lb">Health</span> a <span class="lo">Champion</span> restores as result of dealing <span class="lb">Physical Damage</span> on <span class="lb">Basic Attacks</span> or some <span class="lb">Abilities</span>. Measured in percentage.</span>
+            </li>
+            <li>Spell Vamp:<span class="lw"> The Equivalent of <span class="lb">Life Steal</span> but affects <span class="lb">Abilities</span> or <span class="lb">Item Actives</span> that deal <span class="lb">Magic Damage</span>. Measured in percentage.</span>
+            </li>
+            <li>Heal and Shield Power:<span class="lw"> Increases the effectiveness of <span class="lb">Heals</span> and <span class="lb">Shields</span> by a percentage.</span>
+            </li>
+        </ul>
+    </div>
+    <div id="dmg" class="divs">
+        <!-- PHYSICAL AND MAGICAL DAMAGE -->
+        <h2>Damage</h2>
+        <p>Damage can be separated into 4 types:</p>
+        <ul>
+            <li>Physical Damage</li>
+            <li>Magical Damage</li>
+            <li>True Damage</li>
+            <li>Pure Damage</li>
+        </ul>
+        <p><span class="lb">Physical</span> and <span class="lb">Magical</span> <span class="lr">Damage</span> are the most common types of <span class="lr">Damage</span>. <span class="lb">True</span> <span class="lr">Damage</span> is a rare type of <span class="lr">Damage</span>. And lastly, <span class="lb">Pure</span> <span class="lr">Damage</span> is the rarest of them all, only present in the <span class="lb">Nexus Obelisk</span> of each <span class="lb">Base</span> (Also known as <span class="lb">Fountain Laser</span>).</p>
+        <ul>
+            <!-- PHYSICAL DAMAGE -->
+            <li>Physical Damage:<span class="lw"> A type of <span class="lr">Damage</span> that is is dealt by <span class="lb">Basic Attacks</span>, some <span class="lb">Items</span>, some <span class="lb">Abilities</span> and more. It is mitigated by <span class="lb">Armor</span>.</span>
+            </li>
+            <!-- MAGICAL DAMAGE -->
+            <li>Magical Damage:<span class="lw"> A type of <span class="lr">Damage</span> that is is dealt by some <span class="lb">Items</span>, some <span class="lb">Abilities</span> and more. It is mitigated by <span class="lb">Magic Resistance</span>.</span>
+            </li>
+            <!-- TRUE DAMAGE -->
+            <li>True Damage:<span class="lw"> A type of <span class="lr">Damage</span> dealt by rare <span class="lb">Abilities</span>. <span class="lgray">True</span> <span class="lr">Damage</span> ignores <span class="lb">Armor</span> and <span class="lb">Magic Resistance</span>.</span>
+            </li>
+            <!-- PURE DAMAGE -->
+            <li>Pure Damage:<span class="lw"> A type of <span class="lr">Damage</span> that ignores <span class="lb">Armor</span> and <span class="lb">Magic Resistance</span> like <span class="lgray">True</span> <span class="lr">Damage</span>, but also ignores any <span class="lb">invulnerability</span> and <span class="lb">revive</span> effects. The only possible resistance to this type of <span class="lr">Damage</span> is <span class="lb">Untargetability</span>.</span>
+            </li>
+        </ul>
+    </div>
+    <div id="biggold">
+        <div id="gold" class="divs">
+            <!-- GOLD -->
+            <h2>Gold</h2>
+            <p><span class="lo">Gold</span> is <span class="lo">League of Legends</span>' <span class="lb">In-Game Currency</span>. It is used to buy <span class="lb">items</span> in the shop that provide <span class="lo">Champions</span> with <span class="lb">bonus stats</span> and <span class="lb">abilities</span>, which in turn is one of the main ways for <span class="lo">Champions</span> to increase their power over the course of a game.</p>
+            <p>At the beginning of the game, <span class="lo">Champions</span> are given <span class="lb">starting</span> <span class="lo">Gold</span> (500<span class="lo">g</span>), and can receive more <span class="lo">Gold</span> through various means. Actively, <span class="lo">Champions</span> acquire <span class="lo">Gold</span> through <span class="lb">last hitting minions</span> and <span class="lb">monsters</span>, destroying <span class="lr">enemy</span> <span class="lb">turrets</span>, and <span class="lb">killing</span> <span class="lr">enemy</span> <span class="lo">Champions</span> (or <span class="lb">assisting</span> in <span class="lb">kills</span>). <span class="lo">Champions</span> also passively generate <span class="lo">Gold</span>, which can be increased by <span class="lb">items</span>. Passive <span class="lo">Gold</span> gain does not activate until <span class="lb">minions</span> spawn.</p>
+            <p><span class="lb">Items</span> can be sold for <span class="lo">Gold</span> in the shop, and any purchase can be <span class="lb">Undone</span> to completely refund the <span class="lb">Item</span>'s cost, provided the <span class="lo">Champion</span> has not since left the vicinity of the <span class="lb">Shop</span>, dealt or received <span class="lr">Damage</span>, or used the <span class="lb">Item</span>.</p>
+        </div>
+        <div id="gold_calculator">
+            <h2>Passive Gold Calculator</h2>
+            <input id="goldMinute" type="number" min="0" step="1" max="100" placeholder="mins"> :
+            <input id="goldSecond" type="number" min="0" step="1" max="59" placeholder="secs">
+            <input type="button" value="Give me the Gold!" onclick="passiveGold();">
+            <h3 id="goldAnswer">You would have 0 <span class="lo">Gold</span>.</h3>
+            <h5>Keep in mind this isn't taking the support items into account!</h5>
+        </div>
+    </div>
+    <div id="minion" class="divs">
+        <!-- MINIONS -->
+        <h2>Minions</h2>
+        <p><span class="lb">Minions</span> are <span class="lb">Units</span> that belong to one team or the other, spawn periodically from the <span class="lb">Nexus</span> and advance from one of the 3 <span class="lb">Lanes</span> towards the <span class="lr">enemy</span> <span class="lb">Nexus</span>. They automatically <span class="lr">attack</span> any <span class="lr">enemy</span> <span class="lb">Unit</span> or <span class="lb">Structure</span> they find in their way.</p>
+        <p>Their porpuse is mainly for the <span class="lb">In-Game Economy</span> to tilt in the favor of those that can effectively <span class="lb">Last Hit</span>, that is, to deliver the <span class="lr">Killing</span> blow on them. The <span class="lo">Champion</span> that <span class="lr">kills</span> a <span class="lb">Minion</span> earns <span class="lo">Gold</span>.</p>
+        <p>There are 4 types of <span class="lb">Minions</span>:</p>
+        <ul>
+            <!-- TYPES OF MINIONS -->
+            <li>Melee Minions: <span class="lw">Weak melee attackers.</span></li>
+            <li>Caster Minions: <span class="lw">Weak ranged attackers.</span></li>
+            <li>Siege Minions: <span class="lw">Strong ranged attackers. Has more <span class="lb">Health</span> than Melee Minions.</span>
+            </li>
+            <li>Super Minions: <span class="lw">Strong melee attacker. Has more <span class="lb">Health</span> than Siege Minions. Only spawns after an <span class="lr">enemy</span> <span class="lb">Inhibitor</span> has been destroyed.</span>
+            </li>
+        </ul>
+    </div>
+    <div id="jungle" class="divs">
+        <!-- JUNGLE -->
+        <h2>Jungle</h2>
+        <p>The <span class="lb">Jungle</span> refers to any area of the <span class="lb">Map</span> that is not a <span class="lb">Lane</span> or part of either team's <span class="lb">base</span>, including the <span class="lb">River</span> that divides it.</p>
+        <p><span class="lb">Junglers</span> rely on <span class="lr">killing</span> <span class="lgray">neutral</span> <span class="lr">monsters</span> in the <span class="lb">Jungle</span> to keep up with their <span class="lb">Laning</span> <span class="lgreen">teammates</span> in terms of <span class="lo">Gold</span> and <span class="lb">Experience</span>. In a standard 5-on-5 game of <span class="lo">League of Legends</span>, 4 <span class="lb">Players</span> on a team will be <span class="lb">Laners</span>, and 1 <span class="lb">player</span> will be a designated <span class="lb">Jungler</span>.</p>
+        <p><span class="lr">Monsters</span> are <span class="lgray">neutral</span> <span class="lb">Units</span> that have <span class="lb">Patience</span>, that indicates it's willingness to <span class="lr">fight</span>. <span class="lb">Patience</span> is lost when the <span class="lr">Monster</span> is too far from it's spawn point. If the <span class="lr">Monsters</span>' <span class="lb">Patience</span> runs out, they'll rapidly return to their spawn point, whilst recovering <span class="lb">Health</span> at a rapid pace. <span class="lr">Monsters</span> do not "forget" <span class="lo">Champions</span> that hide in <span class="lb">Bushes</span>.</p>
+        <p>In each <span class="lb">Map</span> side (separated by the <span class="lb">River</span>) there are 4 <span class="lb">Normal Jungle Camps</span>, 2 <span class="lb">Buff Camps</span> and 1 <span class="lb">Boss Jungle Camp</span>. The <span class="lb">Jungle</span> is symmetrical around the center of the <span class="lb">Map</span>.</p>
+        <!-- NORMAL JUNGLE CAMPS -->
+        <p class="center lo">Normal Jungle Camps</p>
+        <ul>
+            <li>Raptors: <span class="lw">The <span class="lb">Raptors</span>' <span class="lb">Camp</span> is made of 5 small <span class="lb">Raptors</span> and 1 <span class="lb">Crimson Raptor</span>.</span>
+            </li>
+            <li>Murk Wolves: <span class="lw">The <span class="lb">Murk Wolves</span>' <span class="lb">Camp</span> is made of 2 small <span class="lb">Murk Wolves</span> and 1 <span class="lb">Greater Murk Wolf</span>.</span>
+            </li>
+            <li>Gromp: <span class="lw">The <span class="lb">Gromp Camp</span> is composed of 1 <span class="lb">Gromp</span> alone.</span>
+            </li>
+            <li>Krugs: <span class="lw">The <span class="lb">Krugs</span>' <span class="lb">Camp</span> is made of 1 <span class="lb">Ancient Krug</span> and 1 <span class="lb">Krug</span>. But these spawn 2 of the weaker version after dying. <span class="lb">Ancient Kurgs</span> spawn 2 <span class="lb">Krugs</span>, and <span class="lb">Krugs</span> spawn 2 <span class="lb">Mini Krugs</span>.</span>
+            </li>
+        </ul>
+        <!-- BUFF CAMP -->
+        <p class="center lo">Buff Camps</p>
+        <ul>
+            <li>Blue Sentinel: <span class="lw">A <span class="lgray">Neutral</span> <span class="lr">Monster</span> that has <span class="lr">Negative</span> <span class="lb">Magic Resistance</span>. Grants <span class="lb">Crest of Insight</span> when killed.</span>
+            </li>
+            <li>Red Brambleback: <span class="lw">A <span class="lgray">Neutral</span> <span class="lr">Monster</span> that has <span class="lr">Negative</span> <span class="lb">Armor</span>. Grants <span class="lb">Crest of Cinders</span> when killed.</span>
+            </li>
+        </ul>
+        <p><span class="lb">Crest of insight</span> is a <span class="lb">Buff</span> which grants increased <span class="lb">Mana</span> and <span class="lb">Energy Regeneration</span>, as well as <span class="lb">+10% Cooldown Reduction</span>. The <span class="lb">Buff</span> is transfered to the one that <span class="lr">kills</span> the holder of the <span class="lb">Buff</span>.</p>
+        <p><span class="lb">Crest of Cinders</span> is a <span class="lb">Buff</span> which grants <span class="lb">Health Regeneration</span> and causes the holder's <span class="lb">Basic Attacks</span> to <span class="lgray">Slow</span> the <span class="lr">enemy</span> while also dealing <span class="lgray">True</span> <span class="lr">Damage</span> over time. The <span class="lb">Buff</span> is transfered to the one that <span class="lr">kills</span> the holder of the <span class="lb">Buff</span>.</p>
+        <!-- BOSS CAMP -->
+        <p class="center lo">Boss Camps</p>
+        <ul>
+            <li>Dragon Pit: <span class="lw">In this alcove spawn 5 dragon types. For the first 35 minutes, spawn the <span class="lb">Elemental Dragons</span>. Every time they are <span class="lr">killed</span> they take 6 minutes to respawn. After the 35 minute mark spawn <span class="lo">Elder Dragons</span>. The <span class="lb">Dragons</span> are the <span class="lgray">Cloud Dragon</span>, <span class="lr">Infernal Dragon</span>, <span class="lb">Ocean Dragon</span>, <span class="lbrown">Mountain Dragon</span> and lastly, <span class="lo">Elder Dragon</span>. When <span class="lr">Slain</span>, except for the <span class="lo">Elder Dragon</span>, they give permanent <span class="lb">Buffs</span> to the team that <span class="lr">kills</span> it. Respectively <span class="lgray">25/50/75% Out-Of-Combat Movement Speed</span>, <span class="lr">8/16/24% increased Attack Damage and Ability Power</span>, <span class="lb"> Restores 4/8/12% Missing Health and Missing Mana over 5 seconds (after 8 seconds of not taking damage from Champions and Turrets)</span>, <span class="lbrown">10/20/30% additional damage as true damage to Epic Monsters and Turrets</span>.<br /> The <span class="lo">Elder Dragon</span>'s <span class="lb">Buff</span> increases by <span class="lb">50%</span> the already existant <span class="lb">Buffs</span>, and grants <span class="lgray">True</span> <span class="lr">Damage</span> over time on all <span class="lb">Spells</span> and <span class="lb">Basic Attacks</span> over 3 seconds, scaling with <span class="lb">Elemental</span> and <span class="lo">Elder Dragons</span> <span class="lr">killed</span>.</span>
+            </li>
+            <li>Baron Pit: <span class="lw">In this alcove spawn the <span class="lp">Rift Herald</span>, once, and the <span class="lo">Baron Nashor</span>. The <span class="lp">Rift Herald</span> spawns at 10 minutes, and if not <span class="lr">slain</span>, disappears before the <span class="lo">Baron Nashor</span> comes to claim his spot. It only spawns once, and drops a <span class="lb">Relic</span> that gives <span class="lb">Empowered Recall</span> and the <span class="lb">Ability</span> to spawn a friendly <span class="lp">Rift Herald</span> that is very strong against <span class="lb">Turrets</span> to the user.<br /> The <span class="lo">Baron Nashor</span> is the most powerful <span class="lgray">Neutral</span> <span class="lr">Monster</span> in <span class="lo">League of Legends</span>. It severely <span class="lr">debuffs</span> any <span class="lo">Champion</span> near the <span class="lb">Baron Pit</span> while it is <span class="lr">Agressive</span>, but it grants an amazing <span class="lb">Buff</span> to the <span class="lgreen">living</span> team members of the team that <span class="lr">kills</span> it. <span class="lo">Hand of Baron</span> grants <span class="lb">Empowered Recall</span>, up to <span class="lb">40 Attack Damage</span> and <span class="lb">40 Ability Power</span>. Additionally, Nearby <span class="lb">Minions</span> are greatly enhanced. The <span class="lb">Buff</span> gives a great <span class="lb">Sieging</span> and <span class="lb">Team-fighting</span> potential, and as such it is usually highly contested between both teams.</span>
+            </li>
+        </ul>
+    </div>
+    <div id="turret" class="divs">
+        <!-- TURRETS -->
+        <h2>Turrets</h2>
+        <p>These are statue-like towers that fire powerful <span class="lb">physical damage</span> attacks. They target the first <span class="lr">enemy</span> to step in range, but prioritize <span class="lb">minions</span> over <span class="lo">champions</span>. But if any <span class="lr">enemy</span> <span class="lo">Champion</span> <span class="lr">damages</span> an <span class="lgreen">ally</span>, that same <span class="lr">enemy</span> is immediatly focused by the <span class="lb">Turret</span>. <span class="lb">Turret</span>'s <span class="lr">damage</span> to a <span class="lo">champion</span> increases each subsequent attack. Their defenses increase when there is no <span class="lr">enemy</span> <span class="lb">minion</span> around them. Even more is that <span class="lb">Turrets</span> grant <span class="lp">true sight</span> in the area around them, which basically means anyone on the <span class="lr">enemy</span> team can be seen while near an <span class="lgreen">ally</span> <span class="lb">Turret</span>.</p><br>
+        <p>Each team possesses 11 total <span class="lb">Turrets</span>, 3 guarding each <span class="lb">Lanes</span> and 2 protecting the <span class="lb">Nexus</span>. The farthest away a <span class="lb">Turret</span> is to the <span class="lgreen">allied</span> <span class="lb">base</span>, the lower its attack <span class="lr">damage</span>. <span class="lb">Turrets</span> do not regenerate <span class="lb">Health</span>, with the exception of the <span class="lb">Nexus Turrets</span>, the 2 <span class="lb">Turrets</span> who protect their <span class="lgreen">allied</span> <span class="lb">Nexus</span>.</p>
+    </div><br><br><br>
+    <div class="top">
+        <a href="#top">
+            <p>Go to the Top &uarr;</p>
+        </a>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+    <!--Básico para todas as páginas-->
+</body>
+</html>

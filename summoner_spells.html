@@ -1,0 +1,239 @@
+<!DOCTYPE html><!-- base das paginas -->
+<html>
+    <head>
+    <link rel="icon" type="image/png" href="backgrounds/leagueicon.png" />
+    <meta charset="utf-8" />
+    <title>League of Legends Guide</title>
+    <link href="ss_style.css" type="text/css" rel="stylesheet">
+    <link href="general_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <script src="general.js"></script>
+</head>
+
+<body onload="verifyId();">
+
+    <!--Básicos para todas as páginas-->
+
+    <header>
+        <h1 id="logo" class="center"><a href="index.html"><img src="Something_Professional/league_of_legends_logo.png" width="480"/></a></h1>
+    </header>
+    <img src="backgrounds/borrado.png" id="fundo">
+    <div id="menu_div">
+        <div id="menu">
+            <table id="tablemenu">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="champions.html">Champions</a></td>
+                </tr>
+                <tr>
+                    <td><a href="items.html">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="runes.html">Runes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="summoner_spells.html">Summoner Spells</a></td>
+                </tr>
+                <tr>
+                    <td><a href="in-game_knowledge.html">In-Game Knowledge</a></td>
+                </tr>
+                <tr>
+                    <td><a href="remastered.html">Remastered</a></td>
+                </tr>
+
+            </table>
+            <div id="menu_signdown" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingBoi()"></div>
+            <div id="menu_signup" class="menu_sign"><img src="Something_Professional/menu_sign.png" width="49vh" onclick="movingOutBoi()"></div>
+        </div>
+    </div>
+    <div id="date">
+        <div id="date1">00/00/0000</div>
+        <div id="date2">00:00:00</div>
+    </div>
+    <div id="identification">
+        <table>
+            <tr>
+                <td>
+                    <div id="userdisplaygeneral"></div>
+                </td>
+                <td style="text-align: center">
+                    <div id="rankerinogeneral"></div>
+                </td>
+                <td>
+                    <div id="avatargeneral"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Básico para todas as páginas-->
+
+    <div class="divs">
+        <h2>Summoner Spells</h2>
+        <p><u>Summoner Spells</u> are spells that are chosen during <b>Champion Select</b>(or in-game, with the Spellbook Rune), and do not depend on the <span class="lo">Champion</span> that is picked.</p>
+        <p>Although <u>Summoner Spells</u> are not restricted by the <span class="lo">Champion</span> you select, the value you get out of them varies greatly. You need to keep in mind your <span class="lo">Champion</span>, the role and position you are occupying, and lastly, your team and your enemy's <span class="lo">Champions</span>.</p>
+    </div><br><br><br>
+    <div id="jeff">
+        <table id="ss_table">
+            <!-- tabela com os summoner spells -->
+            <thead>
+                <tr>
+                    <td>Summoner Level</td>
+                    <td>Spell</td>
+                    <td>Description</td>
+                    <td>Cooldown</td>
+                    <td>Range</td>
+                    <td>Summoner's Rift</td>
+                    <td>Howling Abyss</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- CLARITY -->
+                    <td>1</td>
+                    <td><img src="Summoner_Spells/clarity.png" />Clarity</td>
+                    <td>Restores <span class="lb">50%</span> of your <span class="lo">Champion</span>'s <span class="lb">maximum Mana</span>. Also restores <span class="lgreen">allies</span> for <span class="lb">25%</span> of their <span class="lb">maximum Mana</span>.</td>
+                    <td>180 seconds</td>
+                    <td>Self with AoE of 600 Units</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- GHOST -->
+                    <td>1</td>
+                    <td><img src="Summoner_Spells/ghost.png" />Ghost</td>
+                    <td>Your <span class="lo">Champion</span> can <span class="lb">move through units</span> and has <span class="lb">28-45%</span> (depending on <span class="lo">Champion</span> level) increased <span class="lb">Movement Speed</span> for <span class="lb">10 seconds</span>.</td>
+                    <td>180 seconds</td>
+                    <td>Self</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- HEAL -->
+                    <td>1</td>
+                    <td><img src="Summoner_Spells/heal.png" />Heal</td>
+                    <td>Restores <span class="lb">90-345 Health</span> (depending on <span class="lo">Champion</span> level) and grants <span class="lb">30% Movement Speed</span> for <span class="lb">1 second</span> to you and targeted (or nearest) <span class="lgreen">allied</span> <span class="lo">Champion</span>. This healing is <span class="lr">halved</span> for units recently affected by Summoner <span class="blue">Heal</span>.</td>
+                    <td>240 seconds</td>
+                    <td>Self with 850 Units for 1<span class="lgreen"> Ally</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- MARK -->
+                    <td>1</td>
+                    <td><img src="Summoner_Spells/mark.png" /> Mark</td>
+                    <td><b>ACTIVE</b>: Throws a snowball a long distance, dealing <span class="lb">15 - 100</span> (based on level) <span class="lgray">true damage</span> to the first <span class="lr">enemy</span> unit hit. If <span class="lb">Mark</span> hits an <span class="lr">enemy</span>, you gain the ability to cast <span class="lb">Dash</span> for the next <span class="lb">3 seconds</span>.<br />
+                        <span class="lb">Mark</span> will grant <span class="lb">sight</span> of brush while passing through, and will grant <span class="lp">true sight</span> of a hit <span class="lr">target</span>. The <span class="lp">true sight</span> is granted by the <span class="lb">Mark</span> buff, so it is lost when <span class="lb">Dash</span> is used.<br /> The snowball will bypass Yasuo's Wind Wall(W), Braum's Unbreakable(E) and <span class="lb">spell shields</span>.</td>
+                    <td>80 seconds</td>
+                    <td>1600 Units</td>
+                    <td><span class="lr">Unavailable</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- DASH -->
+                    <td>1</td>
+                    <td><img src="Summoner_Spells/dash.png" /> Dash</td>
+                    <td><b>ACTIVE</b>: Your <span class="lo">Champion</span> <span class="lb">surges</span> into the <span class="lr">target</span> struck by <span class="lb">Mark</span>, dealing <span class="lb">15 - 100</span> (based on level) <span class="lgray">true damage</span> to the <span class="lr">target</span>. Dashing to the <span class="lr">target</span> will reduce <span class="lb">Mark</span>'s <span class="lb">cooldown</span> by <span class="lb">25%</span>.<br /> You lose the ability to cast <span class="lb">Dash</span> if the marked <span class="lr">target</span> dies or removes the mark.</td>
+                    <td>0 seconds</td>
+                    <td>Global</td>
+                    <td><span class="lr">Unavailable</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- BARRIER -->
+                    <td>4</td>
+                    <td><img src="Summoner_Spells/barrier.png" /> Barrier</td>
+                    <td><span class="lb">Shields</span> your <span class="lo">Champion</span> from <span class="lb">115-455 damage</span> (depending on <span class="lo">Champion</span> level) for <span class="lb">2 seconds</span>.</td>
+                    <td>180 seconds</td>
+                    <td>Self</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- EXHAUST -->
+                    <td>4</td>
+                    <td><img src="Summoner_Spells/exhaust.png" /> Exhaust</td>
+                    <td><span class="lb">Exhausts</span> target <span class="lr">enemy</span> <span class="lo">Champion</span>, <span class="lb">slowing</span> them by <span class="lb">30%</span>, and <span class="lb">reducing</span> their <span class="lb">damage dealt</span> by <span class="lb">40%</span> for <span class="lb">2.5 seconds</span>.</td>
+                    <td>210 seconds</td>
+                    <td>650 Units</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- CLEANSE -->
+                    <td>6</td>
+                    <td><img src="Summoner_Spells/cleanse.png" /> Cleanse</td>
+                    <td>Removes all <span class="lr">disables</span> (excluding <span class="lr">suppression</span> and <span class="lr">Airborne</span>) and summoner spell <span class="lr">debuffs</span> affecting your <span class="lo">Champion</span> and <span class="lb">lowers</span> the <span class="lb">duration</span> of <span class="lb">incoming disables</span> by <span class="lb">65%</span> for <span class="lb">3 seconds</span>.</td>
+                    <td>210 seconds</td>
+                    <td>Self</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- TELEPORT -->
+                    <td>6</td>
+                    <td><img src="Summoner_Spells/teleport.png" /> Teleport</td>
+                    <td>After <span class="lb">channeling</span> for <span class="lb">4.5 seconds</span>, <span class="lb">teleports</span> your <span class="lo">Champion</span> to target <span class="lgreen">allied</span> <a href="in-game_knowledge.html#turret">turret</a>, <a href="in-game_knowledge.html#minion">minion</a>, ward and other <span class="lgreen">Allied</span> constructs</td>
+                    <td>300 seconds</td>
+                    <td>Global</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lr">Unavailable</span></td>
+                </tr>
+                <tr>
+                    <!-- FLASH -->
+                    <td>8</td>
+                    <td><img src="Summoner_Spells/flash.png" /> Flash</td>
+                    <td><span class="lb">Teleports</span> your <span class="lo">Champion</span> a short distance toward your cursor's location.</td>
+                    <td>300 seconds</td>
+                    <td>450 Units</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- IGNITE -->
+                    <td>10</td>
+                    <td><img src="Summoner_Spells/ignite.png" /> Ignite</td>
+                    <td><span class="lb">Ignites</span> an <span class="lr">enemy</span> <span class="lo">Champion</span>, dealing <span class="lb">70 - 410</span> (based on level) <span class="lgray">true damage</span> over <span class="lb">5 seconds</span>, applying <a><span class="lb">Grievous Wounds</span></a> and <span class="lb">revealing them</span> for the <span class="lb">duration</span>. The sight will <span class="lr">not</span> reveal <span class="lb">stealth</span> <span class="lo">Champion</span>.</td>
+                    <td>210 seconds</td>
+                    <td>600 Units</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lgreen">Available</span></td>
+                </tr>
+                <tr>
+                    <!-- SMITE -->
+                    <td>10</td>
+                    <td><img src="Summoner_Spells/smite.png" /> Smite</td>
+                    <td>Deals <span class="lb">390-1000</span> <span class="lgray">true damage</span> (depending on <span class="lo">Champion</span> level) to <span class="lr">target</span> <a>epic or large <span class="lr">monster</span></a> or <span class="lr">enemy</span> minion. <span class="lb">Restores Health</span> based on your <span class="lb">maximum life</span> when used against <span class="lr">monsters</span>. Can hold up to <span class="lb">2</span> charges (<span class="lb">90 seconds</span> recharge time).</td>
+                    <td>15 seconds</td>
+                    <td>500 Units (counted from the Source and Target's Edges)</td>
+                    <td><span class="lgreen">Available</span></td>
+                    <td><span class="lr">Unavailable</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><br><br><br>
+    <div class="divs">
+        <!-- SOME TIPS -->
+        <h2>Using Summoner Spells Effectively</h2>
+        <p>As we already said above, the value of <u>Summoner Spells</u> varies greatly due to team compositions, but there are ways to improve their value regardless of the situation.</p>
+        <p><span class="lb">Flash</span> is the most used <u>Summoner Spell</u> due to its high versatility. It is almost regarded as mandatory, with a recent <a href="http://na.leagueoflegends.com/en/page/keybind-wars-which-key-best-flash" target="_blank">official survey</a> showing that it is used 96% of the time. It can be used to dodge skillshots, cancel some abilities' animations, re-position, land abilities, escape, chase and much more. The best way to use it is usually to cross terrain with it, effectively travelling more units than its pre-determined range. To do so, you need to <span class="lb">flash</span> more than half of the wall. Technically you can flash up to 898 Units with this trick.</p>
+        <p><span class="lb">Ignite</span> is mostly used to finish off <span class="lr">enemies</span> (especially in the early game) but sometimes that is not the most effective way. The <span class="lb">Grievous Wounds</span> effect should be taken advantage off against targets with either a lot of <span class="lb">lifesteal</span> or <span class="lb">HP regeneration</span>. Lastly, you can ignite earlier than usual to get the <span class="lr">enemy</span> below <span class="lb">40% HP</span> so that, combined with the <span class="lb">Coup De Grace</span> <a href="runes.html">Rune</a>, you can deal more <span class="lb">damage</span>.</p>
+        <p><span class="lb">Heal</span> should not simply be used when you or an <span class="lgreen">ally</span> are low HP. When using it defensively, you should use it like <span class="lb">Barrier</span>, that is, to mitigate incoming <span class="lb">damage</span>. This is to bait out the <span class="lr">enemies</span> into committing, and potentially turn out victorious.</p>
+        <p><span class="lb">Teleport</span> should not just be used to get to lane faster, but to have more <span class="lb">map presence</span>, and to be able to <span class="lb">Split Push</span> (pushing a lane alone, while your <span class="lgreen">team</span> has other objectives on sight).</p>
+    </div><br><br><br>
+
+    <!--Básico para todas as páginas-->
+    <div id="footer">
+        <footer>
+            <div id="surr"><a target="_blank" href="http://www.surrenderat20.net/">Surrender@20</a></div>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=God+Tet">God Tet</a>
+            <a onmouseenter="baH()" target="_blank" href="http://euw.op.gg/summoner/userName=LLLFFF">LLLFFF</a>
+        </footer>
+    </div>
+
+    <!--Básico para todas as páginas-->
+
+</body>
+</html>
